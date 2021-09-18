@@ -1,5 +1,88 @@
-<link rel="stylesheet" href="../css/main.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>3DPartPicker</title>
+</head>
+<body>
+    <nav>
+            
+        <a href=""><img src="" alt="logo"></a>
+        <div class="search">
+            <form action="/searchroute" method="POST">
+                <button id="filter">filter</button>
+                <input type="text" placeholder="Search.." name="search" id="input">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <!--filler routes-->
+        <a href="/discover" id="discover"><p>Discover Printer</p></a>
+        <a href="/account" id="account"><p>Account</p></a>
+        <img src="" alt="cart" id="cart"><!--dropdown-->
 
+    </nav>
+
+    <section class="about">
+        <h1>3D PRINTING DONE BEST!</h1>
+    </section>
+    
+    
+    <section class="popularParts">
+        <h1>popular parts</h1>
+        <div id="slider">
+            <div class="MS-content">
+                <div class="item"><img src="\" alt="filler"></div>
+                <div class="item"><img src="\" alt="filler"></div>
+                <div class="item"><img src="\" alt="filler"></div>
+                <div class="item"><img src="\" alt="filler"></div>
+                <div class="item"><img src="\" alt="filler"></div>
+            </div>
+            <div class="MS-controls">
+                <button class="MS-left"><i class="arrow left" aria-hidden="true"></i></button>
+                <button class="MS-right"><i class="arrow right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="market">
+        <section class="newReleases">
+            
+            <h2>new releases</h2>
+            <div class="products">
+                <img src="" alt="1">
+                <img src="" alt="2">
+                <img src="" alt="3">
+                <img src="" alt="4">
+            </div>
+        </section>
+        <section class="art">
+            <h2>art</h2>
+        </section>
+        <section class="toys">
+            <h2>toys</h2>
+        </section>
+    </section>
+
+
+    <footer>
+            <section class="social">
+                <h1>socials</h1>
+            </section>
+            <section class="pages">
+                <h1>pages</h1>
+            </section>
+    </footer>
+</body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/multislider.min.js"></script>
 <script src="../js/main.js"></script>
-
-<h1>HELLO</h1>
+<script>
+    let parts = <%- JSON.stringify(parts) %>;
+    $('#slider').multislider();
+</script>
+</html>

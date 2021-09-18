@@ -1,0 +1,175 @@
+body{
+
+
+    overflow-x: hidden;
+}
+
+nav{
+    display:grid;
+    text-align: center;
+}
+nav img{
+    grid-column: 1 / 2;
+}
+
+#filter{
+    grid-column: 3;
+}
+
+#input{
+    grid-column: 4 / 8;
+}
+
+nav form button{
+    grid-column: 9;
+}
+
+#discover{
+    grid-column:10;
+}
+
+#account{
+    grid-column:11;
+}
+
+#cart{
+    grid-column:12;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    background-color: red;
+    height: 150px;
+}
+
+.about h1{
+    grid-column: 4 / 7;
+}
+
+.market{
+    display: grid;
+    grid-template-columns:repeat(8,1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#slider {
+    position: relative;
+    top:50px;
+    margin-bottom: 30px;
+}
+
+#slider .MS-content {
+    white-space: nowrap;     
+    overflow: hidden;    
+    margin-left: 8%;
+    margin-right: 8%;    
+}
+
+#slider .MS-content .item {
+    display: inline-block;   
+    width: 23%;              
+    position: relative;      
+    vertical-align: top;     
+    overflow: hidden;        
+    height: 100%;            
+    white-space: normal;     
+    padding-left: 1%;
+    padding-right:1%;
+    transition: transform 0.6s;
+}
+
+#slider .MS-content .item:hover {
+    transform :scale(1.1);
+}
+
+#slider .MS-controls button {
+    position: absolute;      
+    top: 55px;
+    height: 50px;
+    opacity: 0.4;
+    transition: transform 0.5s;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+#slider .MS-controls button:hover {
+    transform: scale(1.3)
+}
+
+#slider .MS-controls .MS-left {
+    left: 10px;
+}
+#slider .MS-controls .MS-right {
+    right: 10px;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.market{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap:20px;
+}
+
+
+.newReleases{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+}   
+
+.newReleases h2{
+    font-size:2em;
+    grid-column: 1;
+}
+.product{
+    grid-column: 2;
+    display: inline-block;
+}
+
+
+.art{
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+
+.toys{
+    grid-row: 6;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+
+footer{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: 200px;
+    gap: 50px;
+    text-align: center;
+    
+}
+
+footer .social {
+    grid-column:2;   
+}
+footer .pages{
+    grid-column:3;   
+}
