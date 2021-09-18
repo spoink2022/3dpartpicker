@@ -1,6 +1,9 @@
 // Imports
 //  generic
 const config = require('./private/config.json');
+
+const { getPart, integratePart } = require('./lib/get_part.js');
+
 const http = require('http');
 
 //  express
@@ -24,3 +27,11 @@ app.listen(config.PORT, () => {
 
 
 // NEXT
+/*async function test() {
+    getPart(2, (part) => {
+        console.log(part);
+    });
+}
+
+test();
+*/

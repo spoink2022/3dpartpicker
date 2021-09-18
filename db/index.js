@@ -1,0 +1,1 @@
+module.exports.parts = require('./parts.js');
