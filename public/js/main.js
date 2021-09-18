@@ -9,27 +9,29 @@ $( document ).ready(function() {
         let partName = parts[i]['name']
         let tags = [parts[i]['tag'],parts[i]['tag_2']]
         let price= parts[i]['price_20']
-        let partImage = parts[i]['image']
+        let partImage = parts[i]['images'][0]
         let card = `
-            <div class='productCard'>
+            <div class='productCard'>\n
 
-                <a href = "THELINKKKK"><img src='${partImage}' alt='Photo'></img></a>
-                <p class='price'>${price}</p>
-                <p class='name'>${partName}</p>
-                <div class='tags'>
+                <a href = "THELINKKKK"><img src='${partImage}' alt='Photo'></img></a>\n
+                <p class='price'>Price ${price}$</p>\n
+                <p class='name'>${partName}</p>\n
+                <div class='tags'>\n
                 `;
         for (let i = 0; i < tags.length; i++){
-            if(tags[i]) {card += tags[i]}
+            if(tags[i]) {card += tags[i]+' '}
         }
-        card+='\n</div></div>'
+        card+='</div>\n</div>\n'
         cardsinfo.push(card)
         //card is complete for one
     }
     let count = 0;
     for (let i = 0; i < cards.length; i++){
         for (let j = 0; j < 5; j++){
-            print(count, cardsinfo[count])
-            cards[i].appendChild = cardsinfo[count]
+            //console.log(count, cardsinfo[count])
+            console.log(cards[i])
+            
+            cards[i].innerHTML += cardsinfo[count];
             if(count ==parts.length-1){
                 count = 0;
             }else{
