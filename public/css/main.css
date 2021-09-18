@@ -170,20 +170,25 @@ footer .pages{
     grid-column:3;   
 }
 
-
+/*product line*/
+.products{
+    display: flex;
+    flex-wrap: wrap;
+}
 /*product cards*/
 .productCard{
-    width: 100px;
-    height: 100px;
+    
     display: grid;
     grid-template-columns:repeat(4,150px);
-    gap:30px;
-    padding:10px;
+    margin: 10px;
+    background-color: pink;
+    width:auto;
+    grid-template-rows: 100px;
 }
 
 .productCard img{
     grid-column: 1/4;
-    grid-row: 1/3;
+    grid-row: 1/5;
 }
 
 .price{
