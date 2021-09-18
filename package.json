@@ -2,9 +2,10 @@
   "name": "3dpartpicker",
   "version": "1.0.0",
   "description": "Our hack the north projects",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "dependencies": {
     "ejs": "3.1.6",
     "express": "4.17.1",
+    "nodemon": "2.0.12",
     "pg": "8.7.1",
     "serve-favicon": "2.5.0",
     "stripe": "8.176.0"
