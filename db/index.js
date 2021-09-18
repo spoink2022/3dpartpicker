@@ -1,2 +1,2 @@
 module.exports.parts = require('./parts.js');
-module.exports.sellers = require('./sellers.js');
+module.exports.accounts = require('./accounts.js');

@@ -11,3 +11,9 @@ module.exports.getAllSellers = async function() {
     let res = await config.pquery(query, []);
     return res;
 }
+
+module.exports.getUser = async function(id) {
+    let query = 'SELECT * FROM users WHERE id=$1 LIMIT 1';
+    let res = await config.pquery(query, [id]);
+    return res[0];
+}
