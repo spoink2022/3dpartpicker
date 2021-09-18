@@ -1,6 +1,11 @@
 onload = async function() {
     updateTexts();
     updateImages();
+
+    let hiddenUserInput = document.getElementById('hiddenUserInput');
+    hiddenUserInput.value = userid;
+    let hiddenPartInput = document.getElementById('hiddenPartInput');
+    hiddenPartInput.value = part.id;
 }
 
 function updateTexts() {
