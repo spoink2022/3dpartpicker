@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/spoink2022/3dpartpicker/issues"
   },
-  "homepage": "https://github.com/spoink2022/3dpartpicker#readme"
+  "homepage": "https://github.com/spoink2022/3dpartpicker#readme",
+  "dependencies": {
+    "ejs": "3.1.6",
+    "express": "4.17.1",
+    "pg": "8.7.1",
+    "serve-favicon": "2.5.0",
+    "stripe": "8.176.0"
+  }
 }
