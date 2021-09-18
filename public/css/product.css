@@ -12,6 +12,13 @@ header {
     padding-bottom: 10px;
 }
 
+h1 {
+    font-family: "Rubik";
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+}
+
 #logoImg {
     width: 300px;
     height: 75px;
@@ -20,11 +27,13 @@ header {
     float: left;
 }
 
+#avatarText {
+    color: #aaaaaa;
+}
+
 #avatarImg {
     width: 75px;
     height: 75px;
-    padding-top: 10px;
-    margin-right: 25px;
     float: right;
     border-radius: 50%;
 }

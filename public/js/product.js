@@ -7,6 +7,9 @@ function updateTexts() {
     let partTitle = document.getElementById('partTitle');
     partTitle.innerHTML = part.name;
 
+    let avatarText = document.getElementById('avatarText');
+    avatarText.innerHTML = fullName;
+
     let tagList = document.getElementById('tagList');
     let elem = document.createElement('h3');
     elem.innerHTML = part.tag;
