@@ -1,0 +1,19 @@
+{
+  "name": "3dpartpicker",
+  "version": "1.0.0",
+  "description": "Our hack the north projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spoink2022/3dpartpicker.git"
+  },
+  "author": "Nathan, Lee, Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spoink2022/3dpartpicker/issues"
+  },
+  "homepage": "https://github.com/spoink2022/3dpartpicker#readme"
+}
