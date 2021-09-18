@@ -1,1 +1,4 @@
-console.log('HELLO WORLD');
+$( document ).ready(function() {
+    $document.getElementsByClassName
+
+});
