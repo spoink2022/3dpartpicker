@@ -38,9 +38,16 @@
         <img src="" alt="cart" id="cart"><!--dropdown-->
 
     </nav>
-    <section class="filter">
 
-    </section>
+    <div>
+        <form id="shop" action="/print" method="post">
+            <input id="hiddenUserInput" type="hidden" name="user">
+            <input id="hiddenPartInput" type="hidden" name="part">
+            <input name="qt" type="number" value=0>
+            <button type="submit">Checkout</button>
+        </form>
+    </div>
+
     <section class="martketplace">
 
     </section>
@@ -52,9 +59,9 @@
     let part = <%- JSON.stringify(part); %>;
     let avatarUrl = '<%- avatarUrl %>';
     let fullName = '<%- fullName %>';
+    let userid = '<%- userid %>';
 </script>
 
 <script src="../js/product.js"></script>
-<script></script>
 
 </html>
