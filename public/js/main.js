@@ -6,6 +6,7 @@ $( document ).ready(function() {
     let cardsinfo = []
     for (let i = 0; i < parts.length; i++) {
         //access tags, price, image, name 
+        let id = parts[i]['id']
         let partName = parts[i]['name']
         let tags = [parts[i]['tag'],parts[i]['tag_2']]
         let price= parts[i]['price_20']
@@ -13,8 +14,8 @@ $( document ).ready(function() {
         let card = `
             <div class='productCard'>\n
 
-                <a href = "THELINKKKK"><img src='${partImage}' alt='Photo'></img></a>\n
-                <p class='price'>Price ${price}$</p>\n
+                <a href = "http://localhost:3000/product?id=${id}"><img src='${partImage}' alt='Photo'></img></a>\n
+                <p class='price'>Price: $${price}</p>\n
                 <p class='name'>${partName}</p>\n
                 <div class='tags'>\n
                 `;
@@ -27,7 +28,7 @@ $( document ).ready(function() {
     }
     let count = 0;
     for (let i = 0; i < cards.length; i++){
-        for (let j = 0; j < 5; j++){
+        for (let j = 0; j < 7; j++){
             //console.log(count, cardsinfo[count])
             console.log(cards[i])
             
