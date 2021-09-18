@@ -17,7 +17,7 @@ $( document ).ready(function() {
             <div class='productCard'>
 
                 <a href = "http://localhost:3000/product?id=${id}&user=1"><img src='${partImage}' alt='Photo'></img></a>
-                <p class='price'>Price: $${dollarprice}</p>
+                <p class='price'>Price: $${dollarprice.toFixed(2)}</p>
                 <p class='name'>${partName}</p>
                 <div class='tags'>
                 
