@@ -129,7 +129,7 @@ nav form button{
 }
 
 
-.newReleases, .art, .toys{
+.newReleases{
     grid-row: 2;
     display: grid;
     grid-template-columns: 1fr;
@@ -138,20 +138,19 @@ nav form button{
 .newReleases h2, .art h2, .toys h2{
     font-size:2em;
     grid-column: 1;
+    background-color: red;
 }
-
-
 
 .art{
     grid-row: 4;
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: 1fr;
 }
 
 .toys{
     grid-row: 6;
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: 1fr;
 }
 
 footer{
