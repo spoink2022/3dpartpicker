@@ -1,15 +1,25 @@
 body{
     overflow-x: hidden;
+    background-color: white;
+    font-family: recursive;
+    
+    
+    text-align: center;
 }
-
+a{
+    text-decoration: none;
+    color: rgb(119, 117, 117);
+}
 nav{
     display:grid;
     text-align: center;
-    background-color: grey;
+    background-color: black;
     color: white;
 }
 nav img{
     grid-column: 1 / 2;
+    height: 50px;
+    width:auto;
 }
 
 #filter{
@@ -26,10 +36,12 @@ nav form button{
 
 #discover{
     grid-column:10;
+    color:#DA8F2A
 }
 
 #account{
     grid-column:11;
+    color:#DA8F2A
 }
 
 #cart{
@@ -37,15 +49,12 @@ nav form button{
 }
 
 .about{
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    background-color: black;
-    color:white;
+    padding-top:10px;
+    background-color: #DA8F2A;
+    color:black;
+    font-size: 3em;
     height: 150px;
-}
-
-.about h1{
-    grid-column: 4 / 7;
+    text-align: center;
 }
 
 .market{
@@ -69,11 +78,11 @@ nav form button{
 
 #slider .MS-content .item {
     display: inline-block;   
-    width: 23%;              
+    width: 18%;              
     position: relative;      
     vertical-align: top;     
     overflow: hidden;        
-    height: 200px;            
+    height: 250px;            
     white-space: normal;     
     padding-left: 1%;
     padding-right:1%;
@@ -96,7 +105,7 @@ nav form button{
 }
 
 #slider .MS-controls button:hover {
-    transform: scale(1.3)
+    transform: scale(1.05)
 }
 
 #slider .MS-controls .MS-left {
@@ -135,6 +144,7 @@ nav form button{
     grid-row: 2;
     display: grid;
     grid-template-columns: 1fr;
+    color: #DA8F2A;
 }   
 
 .newReleases h2, .art h2, .toys h2{
@@ -147,16 +157,18 @@ nav form button{
     grid-row: 4;
     display: grid;
     grid-template-columns: 1fr;
+    color: #DA8F2A;
 }
 
 .toys{
     grid-row: 6;
     display: grid;
     grid-template-columns: 1fr;
+    color: #DA8F2A;
 }
 
 footer{
-    background-color: black;
+    background-color: #DA8F2A;
     color:white;
     display: grid;
     grid-template-columns:repeat(4,1fr);
@@ -164,6 +176,7 @@ footer{
     gap: 50px;
     text-align: center;
     margin-top: 100px;
+    
 }
 
 footer .social {
@@ -177,21 +190,23 @@ footer .pages{
 /*product line*/
 .products{
     display:flex;
-    
 }
-
 /*product cards*/
 .productCard{
     padding-left:30px;
     width: 200px;
     display: grid;
     grid-template-columns:repeat(4,150px);
-    margin: 10px;
-    background-color:grey;
-    height:auto;
-    grid-template-rows: 100px;
+    margin-left: 30px;
+    background-color:black;
+    color:#DA8F2A;
+    height:310px;
+    grid-template-rows: 80px;
     text-align: center;
     border-radius: 10px;
+
+    
+    
 }
 
 .productCard img{
@@ -199,7 +214,7 @@ footer .pages{
     grid-row: 1/3;
     height:100px;
     padding:5px;
-    
+    border-radius: 10px;
     
 }
 .name{
@@ -213,6 +228,10 @@ footer .pages{
 }
 
 .tags{
-    grid-column: 1;
+    grid-column: 1/2;
     grid-row: 4;
+    display: inline;
+    background-color: rgb(68, 68, 68);
+    border-radius: 10px;
+
 }
