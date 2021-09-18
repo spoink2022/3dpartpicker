@@ -6,19 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/product.css">
     <title>Product</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <nav>
-            
-        <a href=""><img src="" alt="logo"></a>
-        <div class="search">
+    <header>
+        <a href=""><img id="logoImg" src="../images/logo_text.png" alt="logo"></a>
+
+        <div id="searchBar">
             <form action="/searchroute" method="POST">
                 <button id="filter">filter</button>
                 <input type="text" placeholder="Search.." name="search" id="input">
                 <button type="submit">Search</button>
             </form>
         </div>
+
+        <img id="avatarImg">
+        <div style="clear:right;"></div>
+    </header>
+    <nav>
         <!--filler routes-->
+        <!-- NATHAANS STUFF -->
+        <h1 id="partTitle"></h1>
+        <div id="tagList"></div>
+        <div id="imageList"></div>
+        <ul id="partDescription"></ul>
+        <!-- -->
         <a href="/discover" id="discover"><p>Discover Printer</p></a>
         <a href="/account" id="account"><p>Account</p></a>
         <img src="" alt="cart" id="cart"><!--dropdown-->
@@ -34,5 +47,12 @@
 
     </footer>
 </body>
-<script src="../js/main.js"></script>
+<script>
+    let part = <%- JSON.stringify(part); %>;
+    let avatarUrl = '<%- avatarUrl %>';
+</script>
+
+<script src="../js/product.js"></script>
+<script></script>
+<script
 </html>
