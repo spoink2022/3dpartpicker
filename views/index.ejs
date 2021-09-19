@@ -31,17 +31,17 @@
     </section>
     
     <section class="popularParts">
-        <h2>Popular Parts</h2>
-        <!--<div id="slider">
+        <h2 id="popularParts">Popular Parts</h2>
+        <div id="slider">
             <div class="MS-content">
-                    <a href=""><div class="popularProducts"></div></a>
+                    
             </div>
             <div class="MS-controls">
                 <button class="MS-left"><i class="arrow left" aria-hidden="true"></i></button>
                 <button class="MS-right"><i class="arrow right" aria-hidden="true"></i></button>
             </div>
         </div>
-    -->
+    
     </section>
     <section class="market">
         <section class="newReleases">
@@ -80,12 +80,12 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!--<script src="../js/multislider.min.js"></script>-->
+<script src="../js/multislider.min.js"></script>
 <script src="../js/main.js"></script>
 <script>
     let parts = <%- JSON.stringify(parts) %>;
     let user = <%- JSON.stringify(user) %>;
     let avatarUrl = '<%- avatarUrl %>';
-    //$('#slider').multislider();
+    $('#slider').multislider();
 </script>
 </html>
