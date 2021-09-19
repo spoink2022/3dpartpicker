@@ -1,6 +1,9 @@
+let slideIndex = 0;
+
 onload = async function() {
     updateTexts();
     updateImages();
+    showSlideshow();
 
     if (user) {
         // fill in hidden form attributes
@@ -16,6 +19,9 @@ onload = async function() {
 }
 
 function updateTexts() {
+    let discover = document.getElementById('discover');
+    if (!user) { discover.style.visibility = 'visible'; }
+    
     let partTitle = document.getElementById('partTitle');
     partTitle.innerHTML = part.name;
 
@@ -46,9 +52,28 @@ function updateImages() {
     for (let i=0; i<part.img_qt; i++) {
         let elem = document.createElement('img');
         elem.setAttribute('src', part.images[i]);
+        elem.setAttribute('class', 'slideshow blur');
+        elem.style.borderRadius = "25px";
         imageList.appendChild(elem);
     }
 
     let avatarImg = document.getElementById('avatarImg');
     avatarImg.setAttribute('src', avatarUrl);
+}
+
+function showSlideshow()
+{
+    let slides = document.getElementsByClassName("slideshow");
+    
+    for (let i = 0; i < slides.length; i++) 
+    {
+        slides[i].style.display = "none";  
+    }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) {slideIndex = 1}    
+
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlideshow, 3000);
 }

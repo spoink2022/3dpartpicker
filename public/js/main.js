@@ -66,7 +66,7 @@ $( document ).ready(function() {
 
             //creating card
             let cardlink = document.createElement('a');
-            cardlink.setAttribute('href',`http://localhost:3000/product?id=${id}&user=1`)
+            cardlink.setAttribute('href',`http://localhost:3000/product?id=${id}${user ? `&user=${user.id}` : ''}`)
             cardlink.classList.add('cardlink');//css class needeed display block the link
             let carddiv = document.createElement('div');
             carddiv.classList.add('carddiv');//css class needeed
@@ -97,3 +97,15 @@ $( document ).ready(function() {
         }
     }
 });
+
+function updateAvatarInfo() {
+    let avatarText = document.getElementById('avatarText');
+    avatarText.innerHTML = user ? user.first_name + ' ' + user.last_name : 'Login';
+    if (!user) { avatarText.href = '/?user=1'; }
+
+    let avatarImg = document.getElementById('avatarImg');
+    avatarImg.src = avatarUrl;
+
+    let discover = document.getElementById('discover');
+    if (!user) { discover.style.visibility = 'visible'; }
+}
