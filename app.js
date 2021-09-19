@@ -3,6 +3,7 @@
 const config = require('./private/config.json');
 
 const http = require('http');
+const https = require('https');
 
 //  express
 const favicon = require('serve-favicon');
@@ -29,3 +30,22 @@ app.use('/', routes);
 app.listen(config.PORT, () => {
     console.log(`Listening on port ${config.PORT}`);
 });
+
+if (config.SSL) {
+    if (PROD) {
+        app.use(function(req, res, next) {
+            if(!req.secure) {
+              return res.redirect(['https://', req.get('Host'), req.url].join(''));
+            }
+            next();
+        });
+    }
+
+    var privateKey  = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/privkey.pem', 'utf8');
+    var certificate = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/cert.pem', 'utf8');
+    var credentials = {key: privateKey, cert: certificate};
+
+    let httpsServer = https.createServer(credentials, app);
+    httpsServer.listen(443);
+    console.log(`Listening: https on port 443`);
+}
