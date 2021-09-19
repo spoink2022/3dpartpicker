@@ -40,8 +40,8 @@ if (config.SSL) {
         next();
     });
 
-    var privateKey  = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/privkey.pem', 'utf8');
-    var certificate = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/cert.pem', 'utf8');
+    var privateKey  = fs.readFileSync('/etc/letsencrypt/live/3dpartpicker.com/privkey.pem', 'utf8');
+    var certificate = fs.readFileSync('/etc/letsencrypt/live/3dpartpicker.com/cert.pem', 'utf8');
     var credentials = {key: privateKey, cert: certificate};
 
     let httpsServer = https.createServer(credentials, app);
