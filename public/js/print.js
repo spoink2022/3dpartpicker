@@ -2,19 +2,15 @@
 let activeMarkers = [];
 let lastOpenedMarker = null;
 
-// DATA PASSED INTO EJS 
-let user;
-let sellers;
 
 // FUNCTION
 
 function initMap() {
     const def = { lat: 43.6532, lng: -79.3832 };
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 5,
-      center: def,
+        zoom: 5,
+        center: def,
     });
-
     // if user is logged in, don't display discover button
     const locationButton = document.createElement("button");
     locationButton.textContent = "Discover 3D Printers";  // element text
@@ -34,15 +30,16 @@ function initMap() {
     {
         locationButton.addEventListener("click", () => {
             // ask user for location, true if they accept  
-            let userPosition = navigator.geolocation.getCurrentPosition(); 
-            user = {latitude: userPosition.coords.latitude, longitude: userPosition.coords.longitude};
-            // autofill the form
-            let latCoord = document.getElementById('latCoord');
-            latCoord.value = user.latitude;
-            let lonCoord = document.getElementById('lonCoord');
-            lonCoord.value = user.longitude;
-            let coordinateButton = document.getElementById('coordinateButton');
-            coordinateButton.click();
+            navigator.geolocation.getCurrentPosition((position) => {
+                user = {latitude: position.coords.latitude, longitude: position.coords.longitude};
+                // autofill the form
+                let latCoord = document.getElementById('latCoord');
+                latCoord.value = user.latitude;
+                let lonCoord = document.getElementById('lonCoord');
+                lonCoord.value = user.longitude;
+                let coordinateButton = document.getElementById('coordinateButton');
+                coordinateButton.click();
+            }); 
         });
     }
     else if (sellers)
