@@ -2,10 +2,17 @@ onload = async function() {
     updateTexts();
     updateImages();
 
-    let hiddenUserInput = document.getElementById('hiddenUserInput');
-    hiddenUserInput.value = userid;
-    let hiddenPartInput = document.getElementById('hiddenPartInput');
-    hiddenPartInput.value = part.id;
+    if (user) {
+        // fill in hidden form attributes
+        let hiddenUserInput = document.getElementById('hiddenUserInput');
+        hiddenUserInput.value = user ? user.id : false;
+        let hiddenPartInput = document.getElementById('hiddenPartInput');
+        hiddenPartInput.value = part.id;
+    } else {
+        // erase checkout form
+        let checkoutForm = document.getElementById('checkoutForm');
+        checkoutForm.remove();
+    }
 }
 
 function updateTexts() {
@@ -13,7 +20,8 @@ function updateTexts() {
     partTitle.innerHTML = part.name;
 
     let avatarText = document.getElementById('avatarText');
-    avatarText.innerHTML = fullName;
+    avatarText.innerHTML = user ? user.first_name + ' ' + user.last_name : 'Login';
+    if (!user) { avatarText.href = '/?user=1'; }
 
     let tagList = document.getElementById('tagList');
     let elem = document.createElement('h3');
