@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     updateAvatarInfo();
 
-    
+
     let popularcards = document.getElementsByClassName('MS-content')[0]
     for(let i = 0;i<5;i++){
         
@@ -15,7 +15,7 @@ $( document ).ready(function() {
         
         let poppartImage = popcardinfo['images'][0];
         let popcardlink = document.createElement('a');
-        popcardlink.setAttribute('href',`http://localhost:3000/product?id=${popid}&user=1`)
+        popcardlink.setAttribute('href',`http://localhost:3000/product?id=${popid}${user ? `&user=${user.id}` : ''}`);
         //popcardlink.classList.add('cardlink');//css class needeed display block the link
         popcardlink.classList.add('item');
         let popcarddiv = document.createElement('div');
