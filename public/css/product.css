@@ -110,11 +110,22 @@ button, input {
 
 /* CLASSES FOR FORMATTING */
 .productName {
-    
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #DA8F2A;
+
 }
 
 .productTags {
-
+    color:black;
+    background-color: rgb(228, 228, 228);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 10px;
 }
 
 .slideShow {

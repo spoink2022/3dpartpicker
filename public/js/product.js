@@ -32,12 +32,15 @@ function updateTexts() {
     let tagList = document.getElementById('tagList');
     let elem = document.createElement('h3');
     elem.innerHTML = part.tag;
+    elem.setAttribute('class','productTags')
     tagList.appendChild(elem);
     if (part.tag_2) {
         let elem = document.createElement('h3');
         elem.innerHTML = part.tag_2;
         tagList.appendChild(elem);
     }
+
+
 
     let partDescription = document.getElementById('partDescription');
     for (let text of part.description) {
