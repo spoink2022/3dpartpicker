@@ -2,6 +2,7 @@
 //  generic
 const config = require('./private/config.json');
 
+const fs = require('fs');
 const http = require('http');
 const https = require('https');
 
