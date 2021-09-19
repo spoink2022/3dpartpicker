@@ -12,9 +12,6 @@ onload = function() {
         let checkoutProduct = document.getElementById('checkoutProduct');
         checkoutProduct.value = part.id;
 
-        let checkoutUser = document.getElementById('checkoutUser');
-        checkoutUser.value = user.id;
-
         let selectedItem = document.getElementById('selectedItem');
         selectedItem.innerHTML = `${part.name} x${part.qt} - $${(Math.round(part.price_20*part.qt)/100).toFixed(2)}`;
 
@@ -38,6 +35,9 @@ function updateSelectedPrinter(s) {
 
     let selectedProfile = document.getElementById('selectedProfile');
     selectedProfile.src = s.avatar_url;
+
+    let checkoutSeller = document.getElementById('checkoutSeller');
+    checkoutSeller.value = s.id;
 
     let checkoutButton = document.getElementById('checkoutButton');
     checkoutButton.disabled = false;

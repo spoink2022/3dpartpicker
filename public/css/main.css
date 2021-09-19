@@ -8,6 +8,7 @@ body {
     background-color: white;
     font-family: recursive;
     text-align: center;
+    width: 100%;
 }
 a {
     text-decoration: none;
@@ -46,17 +47,18 @@ button,  input {
 }
 
 #input{
-    grid-column: 4 / 8;
+    grid-column: 4 / 6;
 }
 
-nav form button{
-    grid-column: 9;
+#searchButton {
+    grid-column: 7;
 }
 
 #discover{
     margin-top: 17px;
-    grid-column:10;
-    color:#DA8F2A
+    grid-column:8;
+    color:#DA8F2A;
+    text-align: left;
 }
 
 #account{
@@ -212,14 +214,25 @@ footer .pages{
 }
 
 /*CARDS css*/
-.carddiv{
-
+.products{
+    display: inline-flex;
+    flex-wrap:wrap;
 }
-.cardlink{
 
+.cardlink{
+    background-color: grey;
+    margin: 1%;
+    width:22%;
+    border-radius: 10px;
+}
+.carddiv{
+    
 }
 .cardimg{
-
+    width:80%;
+    padding:5px;
+    height: auto;
+    border-radius: 10px;
 }
 .cardprice{
 
@@ -228,5 +241,5 @@ footer .pages{
 
 }
 .cardname{
-    
+
 }

@@ -15,12 +15,14 @@
             <form action="/searchroute" method="POST">
                 <button id="filter">Filter</button>
                 <input type="text" placeholder="Type anything..." name="search" id="input">
-                <button type="submit">Search</button>
+                <button id="searchButton" type="submit">Search</button>
             </form>
         </div>
-        
+        <a id="avatarText"></a>
+        <img id="avatarImg">
         <!--filler routes-->
         <a href="/print" id="discover"><p>Discover Printers</p></a>
+
     </nav>
 
     <section class="about">
@@ -29,7 +31,7 @@
     </section>
     
     <section class="popularParts">
-        <h1>Popular Parts</h1>
+        <h2>Popular Parts</h2>
         <!--<div id="slider">
             <div class="MS-content">
                     <a href=""><div class="popularProducts"></div></a>
@@ -78,12 +80,12 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="../js/multislider.min.js"></script>
-<script src="../js/test.js"></script><!--linked to a test.js document-->
+<!--<script src="../js/multislider.min.js"></script>-->
+<script src="../js/main.js"></script>
 <script>
     let parts = <%- JSON.stringify(parts) %>;
     let user = <%- JSON.stringify(user) %>;
     let avatarUrl = '<%- avatarUrl %>';
-    $('#slider').multislider();
+    //$('#slider').multislider();
 </script>
 </html>
