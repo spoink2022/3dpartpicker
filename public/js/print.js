@@ -15,6 +15,9 @@ onload = function() {
         let checkoutUser = document.getElementById('checkoutUser');
         checkoutUser.value = user.id;
 
+        let selectedItem = document.getElementById('selectedItem');
+        selectedItem.innerHTML = `${part.name} x${part.qt} - $${Math.round(part.price_20*part.qt)/100}`;
+
         let checkoutElements = document.getElementById('checkoutElements');
         checkoutElements.style.visibility = 'visible';
     }
@@ -35,6 +38,9 @@ function updateSelectedPrinter(s) {
 
     let selectedProfile = document.getElementById('selectedProfile');
     selectedProfile.src = s.avatar_url;
+
+    let checkoutButton = document.getElementById('checkoutButton');
+    checkoutButton.disabled = false;
 }
 
 // MAPS

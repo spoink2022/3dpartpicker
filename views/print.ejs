@@ -21,12 +21,13 @@
       <h2 id="selectedName">- No Printer Selected -</h2>
       <h4 id="selectedAddress"></h4>
       <img id="selectedProfile" src="">
+      <h2 id="selectedItem"></h2>
 
       <form id="checkoutForm" action="/create-checkout-session" method="post">
         <input id="checkoutQt" name="qt" type="hidden">
         <input id="checkoutProduct" name="product" type="hidden">
         <input id="checkoutUser" name="user" type="hidden">
-        <button id="checkoutButton" type="submit">Checkout</button>
+        <button id="checkoutButton" type="submit" disabled>Checkout</button>
       </form>
     </div>
 
