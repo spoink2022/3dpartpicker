@@ -14,7 +14,7 @@
         <div class="search">
             <form action="/searchroute" method="POST">
                 <button id="filter">Filter</button>
-                <input type="text" placeholder="Search.." name="search" id="input">
+                <input type="text" placeholder="Type anything..." name="search" id="input">
                 <button type="submit">Search</button>
             </form>
         </div>
@@ -31,20 +31,16 @@
     
     <section class="popularParts">
         <h1>Popular Parts</h1>
-        <div id="slider">
+        <!--<div id="slider">
             <div class="MS-content">
-                    <a href=""><div class="item products"></div></a>
-                    <a href=""><div class="item products"></div></a>
-                    <a href=""><div class="item products"></div></a>
-                    <a href=""><div class="item products"></div></a>
-                    <a href=""><div class="item products"></div></a>
-                    <a href=""><div class="item products"></div></a>
+                    <a href=""><div class="popularProducts"></div></a>
             </div>
             <div class="MS-controls">
                 <button class="MS-left"><i class="arrow left" aria-hidden="true"></i></button>
                 <button class="MS-right"><i class="arrow right" aria-hidden="true"></i></button>
             </div>
         </div>
+    -->
     </section>
     <section class="market">
         <section class="newReleases">
@@ -84,7 +80,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../js/multislider.min.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/test.js"></script><!--linked to a test.js document-->
 <script>
     let parts = <%- JSON.stringify(parts) %>;
     let user = <%- JSON.stringify(user) %>;

@@ -28,7 +28,7 @@ nav img{
     width:auto;
 }
 
-button {
+button,  input {
     font-family: recursive;
     border: none;
     padding: 5px 10px;
@@ -48,16 +48,19 @@ nav form button{
 }
 
 #discover{
+    margin-top: 20px;
     grid-column:10;
     color:#DA8F2A
 }
 
 #account{
+    margin-top: 20px;
     grid-column:11;
     color:#DA8F2A
 }
 
 #cart{
+    margin-top: 15px;
     grid-column:12;
 }
 
@@ -200,51 +203,22 @@ footer .pages{
     grid-column:3;   
 }
 
-/*product line*/
-.products{
-    display:flex;
-}
-/*product cards*/
-.productCard{
-    padding-left:30px;
-    width: 200px;
-    display: grid;
-    grid-template-columns:repeat(4,150px);
-    margin-left: 30px;
-    background-color:black;
-    color:#DA8F2A;
-    height:310px;
-    grid-template-rows: 80px;
-    text-align: center;
-    border-radius: 10px;
+/*CARDS css*/
+.carddiv{
 
+}
+.cardlink{
+
+}
+.cardimg{
+
+}
+.cardprice{
+
+}
+.cardtag{
+
+}
+.cardname{
     
-    
-}
-
-.productCard img{
-    grid-column: 1/3;
-    grid-row: 1/3;
-    height:100px;
-    padding:10px;
-    border-radius: 10px;
-    
-}
-.name{
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.price{
-    grid-column: 1;
-    grid-row: 5;
-}
-
-.tags{
-    grid-column: 1/2;
-    grid-row: 4;
-    display: inline;
-    background-color: rgb(68, 68, 68);
-    border-radius: 10px;
-
 }
