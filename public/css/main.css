@@ -34,6 +34,13 @@ button,  input {
     padding: 5px 10px;
 }
 
+.title {
+    font-family: rubik;
+    padding-bottom: 15px;
+}
+
+
+
 #filter{
     margin-top: 15px;
     grid-column: 3;
@@ -48,7 +55,7 @@ nav form button{
 }
 
 #discover{
-    margin-top: 20px;
+    margin-top: 17px;
     grid-column:10;
     color:#DA8F2A
 }
@@ -59,24 +66,27 @@ nav form button{
     color:#DA8F2A
 }
 
-#cart{
-    margin-top: 15px;
-    grid-column:12;
-}
-
 .about{
-    padding-top:10px;
+    padding-top:50px;
     background-color: #DA8F2A;
     color:black;
     font-size: 3em;
-    height: 150px;
+    height: 200px;
     text-align: center;
+}
+
+.about .heading {
+    color: #222324;
 }
 
 .market{
     display: grid;
     grid-template-columns:repeat(8,1fr);
     grid-auto-rows: minmax(100px, auto);
+}
+
+.popularParts {
+    padding-top: 40px;
 }
 
 #slider {
