@@ -5,6 +5,7 @@ body {
 }
 
 header {
+    display: grid;
     background-color: #131921;
     padding: 0;
     margin: 0;
@@ -20,11 +21,21 @@ h1 {
 }
 
 #logoImg {
-    width: 300px;
-    height: 75px;
-    margin-left: 25px;
-    padding-top: 10px;
-    float: left;
+    grid-column: 1 / 2;
+    height: 50px;
+    width:auto;
+}
+
+#filter{
+    grid-column: 3;
+}
+
+#input {
+    grid-column: 4 / 8;
+}
+
+header form button {
+    grid-column: 9;
 }
 
 #avatarText {
@@ -36,8 +47,4 @@ h1 {
     height: 75px;
     float: right;
     border-radius: 50%;
-}
-
-#searchBar {
-    float: left;
 }

@@ -1,28 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body{
     overflow-x: hidden;
     background-color: white;
     font-family: recursive;
-    
-    
     text-align: center;
 }
 a{
     text-decoration: none;
     color: rgb(119, 117, 117);
 }
-nav{
-    display:grid;
+
+nav {
+    display: grid;
     text-align: center;
     background-color: black;
     color: white;
+    
 }
+
 nav img{
     grid-column: 1 / 2;
     height: 50px;
     width:auto;
 }
 
+button {
+    font-family: recursive;
+    border: none;
+    padding: 5px 10px;
+}
+
 #filter{
+    margin-top: 15px;
     grid-column: 3;
 }
 

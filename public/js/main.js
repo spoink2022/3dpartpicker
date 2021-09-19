@@ -1,6 +1,4 @@
 $( document ).ready(function() {
-
-
     let cards = document.getElementsByClassName('products');
     let cardsinfo = [];
     for (let i = 0; i < parts.length; i++) {
@@ -42,6 +40,4 @@ $( document ).ready(function() {
             }
         }
     }
-    
-
 });
