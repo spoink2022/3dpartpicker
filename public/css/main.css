@@ -8,6 +8,7 @@ body{
     background-color: white;
     font-family: recursive;
     text-align: center;
+    width: 100%;
 }
 a{
     text-decoration: none;
@@ -215,21 +216,24 @@ footer .pages{
 
 /*CARDS css*/
 .products{
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 200px;
-    
+    display: inline-flex;
+    flex-wrap:wrap;
 }
 
 .cardlink{
-    background-color: red;
+    background-color: grey;
+    margin: 1%;
+    width:22%;
+    border-radius: 10px;
 }
 .carddiv{
     
 }
 .cardimg{
-    
+    width:80%;
+    padding:5px;
     height: auto;
+    border-radius: 10px;
 }
 .cardprice{
 
