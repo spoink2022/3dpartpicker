@@ -6,12 +6,12 @@
 }
 
 #map {
-    height: 700px;
-    width: 70%;
+    height: 500px;
+    width: 60%;
     margin: auto;
     border: solid 5px #DA8F2A;
     border-radius: 25px;
-    margin-bottom: 150px;
+    margin-bottom: 30px;
 }
 
 body {
@@ -127,16 +127,28 @@ button, input {
 
 #selectedName {
     padding-bottom: 20px;
+    font-size: 2.6em;
 }
 
 #selectedAddress {
+    margin-top: 50px;
     padding-bottom: 20px;
+    padding-right:30px;
 }
 
 #selectedProfile {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+    height: 100px;
+    width:auto;
 }
-
+#selectedprinterinfo{
+    display: flex;
+    flex-basis: 200px;
+    width:500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 #selectedItem {
     padding-bottom: 20px;
 }
@@ -148,10 +160,17 @@ footer{
 }
 
 #checkoutButton{
-    width:200px;
+    width:500px;
     height: 50px;
     color: black;
     background-color: #DA8F2A;
     border-radius: 10px;
     cursor:pointer;
+}
+.itemImage{
+    height:200px;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 20px;
+
 }

@@ -42,9 +42,12 @@
     <section class="customerInfo">
       <div id="checkoutElements" style="visibility: hidden;">
         <h2 id="selectedName">- No Printer Selected -</h2>
-        <h4 id="selectedAddress"></h4>
-        <img id="selectedProfile" src="">
+        <div id='selectedprinterinfo'>
+          <h4 id="selectedAddress"></h4>
+          <img id="selectedProfile" src="">
+        </div>
         <h2 id="selectedItem"></h2>
+        <img id="selectedItemImage"></img>
 
         <form id="checkoutForm" action="/create-checkout-session" method="post">
           <input id="checkoutQt" name="qt" type="hidden">

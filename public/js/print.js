@@ -45,6 +45,11 @@ onload = function() {
 
         let checkoutElements = document.getElementById('checkoutElements');
         checkoutElements.style.visibility = 'visible';
+
+        let selectedItemImage = document.getElementById('selectedItemImage');
+        selectedItemImage.classList.add('itemImage'); 
+        selectedItemImage.src = part.images[0];
+        console.log(selectedItemImage);
     }
 }
 
