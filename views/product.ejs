@@ -36,38 +36,37 @@
                 <h1 id="partTitle"></h1>
         </section>
         
-        <section class="productName">
-                <div id="tagList"></div>
+        <section class="productHeader">
+            <h1 id="header">Product Tags:</h1>
+            <div id="tagList"></div>
         </section>
         
-        <section class="slideShow">
+        <div id="main">
+            <section class="slideShow">
                 <div id="imageList"></div>
-        </section>
+            </section>
 
-        <section class="slideShow">
-                <div id="imageList"></div>
-        </section>
-
-        <section class="slideShow">
+            <section class="productInfo">
+                <h2>Price: </h2>
+                <h3 id="productPrice"></h3>
+                <h2>Product Info:</h2>
                 <ul id="partDescription"></ul>
-        </section>
+            </section>
+        </div>
         
-        <section class="slideShow">
-                <ul id="partDescription"></ul>
+        <section class="checkout">
+                <h1>Quantity:</h1>
+                <div>
+                        <form id="checkoutForm" action="/print" method="post">
+                            <input id="hiddenUserInput" type="hidden" name="user">
+                            <input id="hiddenPartInput" type="hidden" name="part">
+                            <input name="qt" type="number" value=0>
+                            <button type="submit">Checkout</button>
+                        </form>
+                    </div>
         </section>
     </nav>
     </div>
-
-
-    <div>
-        <form id="checkoutForm" action="/print" method="post">
-            <input id="hiddenUserInput" type="hidden" name="user">
-            <input id="hiddenPartInput" type="hidden" name="part">
-            <input name="qt" type="number" value=0>
-            <button type="submit">Checkout</button>
-        </form>
-    </div>
-
     <section class="marketplace">
     </section>
     <footer>

@@ -105,12 +105,12 @@ footer{
   }
 
 @keyframes blur {
-    from {opacity: .5}
-    to {opacity: 0.9}
+    from {opacity: .1}
+    to {opacity: .9}
 }
 
 @-webkit-keyframes blur {
-    from {opacity: .5}
+    from {opacity: .1}
     to {opacity: .9}
 }
 
@@ -124,24 +124,85 @@ footer{
 
 }
 
-.productTags {
+.productTag {
     color:black;
     background-color: rgb(228, 228, 228);
     margin: 5px;
     padding: 5px;
     border-radius: 4px;
     display: inline-block;
-    font-size: 10px;
+    font-size: 25px;
+    margin-bottom: 60px;
+}
+
+.productHeader {
+    text-align: center;
+    margin: auto;
+}
+
+#main {
+    height: 500px;
+}
+
+#main h1 {
+    margin: auto;
+}
+
+#main h2 {
+    margin: auto;
+    padding-bottom: 25px;
+    font-size: 30pt;
 }
 
 .slideShow {
-
+    width: 50%;
+    float: left;
 }
 
 .productInfo {
+    width: 40%;
+    float: right;
+    text-align: center;
+    border: solid 5px rgb(228, 228, 228);
+    border-radius: 25px;
+    margin-right: 82px;
+    padding: 20px;
+    height: 423px;
 
+}
+
+.productInfo h2 {
+    padding-top: 20px;
+}
+
+.productInfo h3 {
+    margin-top: 15px
+    margin-bottom: 15px;
+    font-size: 35px;
+    color: #c93232;
+}
+
+.partDescription {
+    padding-top: 20px;
 }
 
 .checkout {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #DA8F2A;
+    text-align: center;
 
 }
+
+.checkout input, button {
+    margin-bottom: 40px;
+    font-size: 15pt;
+}
+
+li {
+    position: relative;
+    text-align: left;
+    text-indent: 2em;
+  }

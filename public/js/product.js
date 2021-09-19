@@ -32,14 +32,14 @@ function updateTexts() {
     let tagList = document.getElementById('tagList');
     let elem = document.createElement('h3');
     elem.innerHTML = part.tag;
-    elem.setAttribute('class','productTags')
+    elem.setAttribute('class','productTag')
     tagList.appendChild(elem);
     if (part.tag_2) {
         let elem = document.createElement('h3');
         elem.innerHTML = part.tag_2;
+        elem.setAttribute('class','productTag')
         tagList.appendChild(elem);
     }
-
 
 
     let partDescription = document.getElementById('partDescription');
@@ -48,6 +48,9 @@ function updateTexts() {
         elem.innerHTML = text;
         partDescription.appendChild(elem);
     }
+
+    let priceElem = document.getElementById('productPrice');
+    priceElem.innerHTML = '$' + (part.price_20 / 100).toFixed(2);
 }
 
 function updateImages() {
@@ -57,6 +60,7 @@ function updateImages() {
         elem.setAttribute('src', part.images[i]);
         elem.setAttribute('class', 'slideshow blur');
         elem.style.borderRadius = "25px";
+        elem.style.margin = "auto";
         imageList.appendChild(elem);
     }
 
