@@ -24,6 +24,15 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(favicon('public/images/favicon.ico'));
 
+if (config.SSL) {
+    app.use(function(req, res, next) {
+        if(!req.secure) {
+            return res.redirect(['https://', req.get('Host'), req.url].join(''));
+        }
+        next();
+    });
+}
+
 app.use('/', routes);
 
 
@@ -33,13 +42,6 @@ app.listen(config.PORT, () => {
 });
 
 if (config.SSL) {
-    app.use(function(req, res, next) {
-        if(!req.secure) {
-            return res.redirect(['https://', req.get('Host'), req.url].join(''));
-        }
-        next();
-    });
-
     var privateKey  = fs.readFileSync('/etc/letsencrypt/live/3dpartpicker.com/privkey.pem', 'utf8');
     var certificate = fs.readFileSync('/etc/letsencrypt/live/3dpartpicker.com/cert.pem', 'utf8');
     var credentials = {key: privateKey, cert: certificate};
