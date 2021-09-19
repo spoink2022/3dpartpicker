@@ -5,12 +5,15 @@ body {
 }
 
 header {
-    display: grid;
     background-color: #131921;
     padding: 0;
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1 {
@@ -20,31 +23,63 @@ h1 {
     text-align: center;
 }
 
-#logoImg {
-    grid-column: 1 / 2;
-    height: 50px;
-    width:auto;
+nav {
+    background-color: black;
+    color: white;
+    text-align: center;
 }
 
-#filter{
+nav img {
+    height: 50px;
+    width:auto;
+    padding-bottom: 16px;
+}
+
+nav #logo {
+    margin-top: 12px;
+    margin-left: 32px;
+    margin-right: 32px;
+    float: left;
+}
+
+nav #search {
+    float: left;
+}
+
+button, input {
+    margin-top: 20px;
+    font-family: "Recursive";
+    border: none;
+    padding: 5px 10px;
+}
+
+#filter {
+    margin-top: 15px;
     grid-column: 3;
 }
 
-#input {
-    grid-column: 4 / 8;
+#discover{
+    margin-top: 12px;
+    padding-top: 12px;
+    float: left;
+    color:#DA8F2A;
+    margin-left: 64px;
 }
 
-header form button {
-    grid-column: 9;
+#avatar {
+    float: right;
 }
 
 #avatarText {
-    color: #aaaaaa;
+    float: left;
+    padding-top: 24px;
+    padding-right: 16px;
+    color: #bbbbbb;
 }
 
 #avatarImg {
-    width: 75px;
-    height: 75px;
     float: right;
+    padding: 8px;
+    margin-right: 16px;
     border-radius: 50%;
 }

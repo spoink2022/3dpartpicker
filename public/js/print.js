@@ -7,7 +7,7 @@ let lastOpenedMarker = null;
 onload = function() {
     // login        
     let avatarText = document.getElementById('avatarText');
-    if (user) {
+    if (part) {
         avatarText.innerHTML = user.first_name + ' ' + user.last_name;
     } else {
         avatarText.innerHTML = 'Login';

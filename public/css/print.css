@@ -60,13 +60,9 @@ button, input {
     grid-column: 3;
 }
 
-#input {
-    grid-column: 4 / 8;
-}
-
 #discover{
     margin-top: 12px;
-    padding-top: 16px;
+    padding-top: 12px;
     float: left;
     color:#DA8F2A;
     margin-left: 64px;
@@ -78,7 +74,9 @@ button, input {
 
 #avatarText {
     float: left;
-    padding: 24px;
+    padding-top: 24px;
+    padding-right: 16px;
+    color: #bbbbbb;
 }
 
 #avatarImg {
@@ -90,7 +88,6 @@ button, input {
 
 #account{
     margin-top: 20px;
-    grid-column:11;
     color:#DA8F2A;
 }
 

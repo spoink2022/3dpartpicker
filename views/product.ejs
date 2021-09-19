@@ -11,20 +11,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <header>
-        <a href=""><img id="logoImg" src="../images/logo_text.png" alt="logo"></a>
-        <div id="searchBar">
+    <nav>
+        <a href="/" id="logo"><img src="../images/logo_text.png" alt="logo"></a>
+        <div id="search" class="search">
             <form action="/searchroute" method="POST">
-                <button id="filter">filter</button>
-                <input type="text" placeholder="Search.." name="search" id="input">
+                <button id="filter">Filter</button>
+                <input type="text" placeholder="Type anything..." name="search" id="input">
                 <button type="submit">Search</button>
             </form>
         </div>
-        <img id="avatarImg">
-        <a id="avatarText"></a>
+        
+        <!--filler routes-->
+        <div id="avatar">
+          <a id="avatarText"></a>
+          <img id="avatarImg">
+        </div>
         <div style="clear:right;"></div>
-    </header>
-    <nav>
+    </nav>
+    <div>
         <!--filler routes-->
         <!-- NATHAANS STUFF -->
         <h1 id="partTitle"></h1>
@@ -34,7 +38,7 @@
         <!-- -->
         <img src="" alt="cart" id="cart"><!--dropdown-->
 
-    </nav>
+    </div>
 
     <div>
         <form id="checkoutForm" action="/print" method="post">
