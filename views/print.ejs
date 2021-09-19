@@ -13,29 +13,53 @@
         let avatarUrl = '<%- avatarUrl %>';
         let sellers = <%- JSON.stringify(sellers) %>;
     </script>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
+    <nav>
+        <a href="/" id="logo"><img src="../images/logo_text.png" alt="logo"></a>
+        <div id="search" class="search">
+            <form action="/searchroute" method="POST">
+                <button id="filter">Filter</button>
+                <input type="text" placeholder="Type anything..." name="search" id="input">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+        <!--filler routes-->
+        <div id="avatar">
+          <a id="avatarText"></a>
+          <img id="avatarImg">
+        </div>
+        <div style="clear:right;"></div>
+    </nav>
 
-    <div id="checkoutElements" style="visibility: hidden;">
-      <h2 id="selectedName">- No Printer Selected -</h2>
-      <h4 id="selectedAddress"></h4>
-      <img id="selectedProfile" src="">
-      <h2 id="selectedItem"></h2>
+    <section class="info"> 
+      <h1 id="caption1"></h1>
+      <h4 id="caption2"></h4>
+      <!--The div element for the map -->
+      <div id="map"></div>
 
-      <form id="checkoutForm" action="/create-checkout-session" method="post">
-        <input id="checkoutQt" name="qt" type="hidden">
-        <input id="checkoutProduct" name="product" type="hidden">
-        <input id="checkoutSeller" name="seller" type="hidden">
-        <button id="checkoutButton" type="submit" disabled>Checkout</button>
+    </section>
+
+    <section class="customerInfo">
+      <div id="checkoutElements" style="visibility: hidden;">
+        <h2 id="selectedName">- No Printer Selected -</h2>
+        <h4 id="selectedAddress"></h4>
+        <img id="selectedProfile" src="">
+        <h2 id="selectedItem"></h2>
+
+        <form id="checkoutForm" action="/create-checkout-session" method="post">
+          <input id="checkoutQt" name="qt" type="hidden">
+          <input id="checkoutProduct" name="product" type="hidden">
+          <input id="checkoutSeller" name="seller" type="hidden">
+          <button id="checkoutButton" type="submit" disabled>Checkout</button>
+        </form>
+      </div>
+
+      <form id="coordinateForm" action="/findSellers" method="post">
+        <input id="latCoord" name="lat" type="hidden">
+        <input id="lonCoord" name="lon" type="hidden">
+        <button id="coordinateButton" type="submit" style="visibility:hidden;"></button>
       </form>
-    </div>
-
-    <form id="coordinateForm" action="/findSellers" method="post">
-      <input id="latCoord" name="lat" type="hidden">
-      <input id="lonCoord" name="lon" type="hidden">
-      <button id="coordinateButton" type="submit" style="visibility:hidden;"></button>
-    </form>
+  </section>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script

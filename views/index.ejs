@@ -10,19 +10,22 @@
 </head>
 <body>
     <nav>
-        <a href="/"><img src="../images/logo_text.png" alt="logo"></a>
-        <div class="search">
+        <a href="#" id="logo"><img src="../images/logo_text.png" alt="logo"></a>
+        <div id="search" class="search">
             <form action="/searchroute" method="POST">
                 <button id="filter">Filter</button>
                 <input type="text" placeholder="Type anything..." name="search" id="input">
-                <button id="searchButton" type="submit">Search</button>
+                <button type="submit">Search</button>
             </form>
         </div>
-        <a id="avatarText"></a>
-        <img id="avatarImg">
+        
         <!--filler routes-->
         <a href="/print" id="discover"><p>Discover Printers</p></a>
-
+        <div id="avatar">
+          <a id="avatarText"></a>
+          <img id="avatarImg">
+        </div>
+        <div style="clear:right;"></div>
     </nav>
 
     <section class="about">

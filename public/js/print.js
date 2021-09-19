@@ -5,7 +5,35 @@ let lastOpenedMarker = null;
 
 // FUNCTION
 onload = function() {
+    // login        
+    let avatarText = document.getElementById('avatarText');
     if (part) {
+        avatarText.innerHTML = user.first_name + ' ' + user.last_name;
+    } else {
+        avatarText.innerHTML = 'Login';
+        avatarText.href = `/?user=1`;
+    }
+    
+    let avatarImg = document.getElementById('avatarImg');
+    avatarImg.src = avatarUrl;
+
+    if (!part)
+    {
+        let caption1 = document.getElementById('caption1');
+        caption1.style.fontSize = '70px';
+        caption1.innerHTML = "Check out some of the 3D printers nearby!";
+
+        let caption2 = document.getElementById('caption2');
+        caption2.innerHTML = "Click on the icons for more details.";
+    }
+    else
+    {
+        let caption1 = document.getElementById('caption1');
+        caption1.innerHTML = "YOU'RE ALMOST THERE!";
+
+        let caption2 = document.getElementById('caption2');
+        caption2.innerHTML = "Just select a nearby seller and you'll be on your way.";
+
         let checkoutQt = document.getElementById('checkoutQt');
         checkoutQt.value = part.qt;
 
@@ -13,7 +41,7 @@ onload = function() {
         checkoutProduct.value = part.id;
 
         let selectedItem = document.getElementById('selectedItem');
-        selectedItem.innerHTML = `${part.name} x${part.qt} - $${Math.round(part.price_20*part.qt)/100}`;
+        selectedItem.innerHTML = `${part.name} x${part.qt} - $${(Math.round(part.price_20*part.qt)/100).toFixed(2)}`;
 
         let checkoutElements = document.getElementById('checkoutElements');
         checkoutElements.style.visibility = 'visible';
@@ -143,11 +171,11 @@ function handleMarkers(position,sellers,map)
         })
         
         let sellerInfo = 
-        `<body style='text-align:center'\>
-        <h3><u>${sellers[i].first_name} ${sellers[i].last_name}</u></h3\>
-        <h4>Rating: ${sellers[i].rating}</h4\>
-        <p>Sales: ${sellers[i].transactions}</p\>
-        <p>Address: ${sellers[i].address}</p\>
+        `<body\>
+        <h3 class="mapInfo"><u>${sellers[i].first_name} ${sellers[i].last_name}</u></h3\><br>
+        <h3 class="mapInfo">Rating: ${sellers[i].rating}</h3\>
+        <p class="mapInfo">Sales: ${sellers[i].transactions}</p\>
+        <p class="mapInfo">Address: ${sellers[i].address}</p\>
         </body>`
         
         let sellerInfoWindow = new google.maps.InfoWindow({

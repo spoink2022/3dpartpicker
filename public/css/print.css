@@ -1,12 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500&family=Rubik:wght@300;400;500&display=swap%27');
 
-button {
-    font-family: "Rubik";
-    font-weight: 500;
+* {
+    padding: 0;
+    margin: 0;
 }
 
 #map {
     height: 700px;
-    width: 100%;
+    width: 70%;
+    margin: auto;
+    border: solid 5px #DA8F2A;
+    border-radius: 25px;
+    margin-bottom: 150px;
 }
 
+body {
+    overflow-x: hidden;
+    background-color: #222324;
+    font-family: recursive;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(119, 117, 117);
+}
+
+nav {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+nav img {
+    height: 50px;
+    width:auto;
+    padding-bottom: 16px;
+}
+
+nav #logo {
+    margin-top: 12px;
+    margin-left: 32px;
+    margin-right: 32px;
+    float: left;
+}
+
+nav #search {
+    float: left;
+}
+
+button, input {
+    margin-top: 20px;
+    font-family: "Recursive";
+    border: none;
+    padding: 5px 10px;
+}
+
+#filter {
+    margin-top: 15px;
+    grid-column: 3;
+}
+
+#discover{
+    margin-top: 12px;
+    padding-top: 12px;
+    float: left;
+    color:#DA8F2A;
+    margin-left: 64px;
+}
+
+#avatar {
+    float: right;
+}
+
+#avatarText {
+    float: left;
+    padding-top: 24px;
+    padding-right: 16px;
+    color: #bbbbbb;
+}
+
+#avatarImg {
+    float: right;
+    padding: 8px;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+#account{
+    margin-top: 20px;
+    color:#DA8F2A;
+}
+
+.info {
+    font-family: "Rubik";
+    font-size: 50pt;
+    padding-top: 150px;
+    padding-bottom: 150;
+    color: #DA8F2A;
+    text-align: center;
+}
+
+.info h1 {
+    font-weight: 400;
+}
+
+.info h4 {
+    padding-top: 40px;
+    padding-bottom: 150px;
+    font-weight: 200;
+    font-size: 20pt;
+}
+
+.customerInfo {
+    padding-top: 50px;
+    text-align: center;
+    background-color: rgb(119, 117, 117);
+}
+
+.mapInfo {
+    padding-top: 0;
+    padding-bottom: 0;
+    color: black;
+    text-align: left;
+}
+
+#selectedName {
+    padding-bottom: 20px;
+}
+
+#selectedAddress {
+    padding-bottom: 20px;
+}
+
+#selectedProfile {
+    padding-bottom: 30px;
+}
+
+#selectedItem {
+    padding-bottom: 20px;
+}
