@@ -8,18 +8,19 @@
     <title>3DPartPicker</title>
 </head>
 <body>
-    <h1>SUCCESS!</h1>
+    <h1>Your order is on its way!</h1>
+    <h3 id="pickupMessage"></h3>
 </body>
 
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    let part = <%- JSON.stringify(part) %>;
-    let user = <%- JSON.stringify(user) %>;
-    let qt = <%- qt %>;
-    console.log(part);
-    console.log(user);
-    console.log(qt);
+    let seller = <%- JSON.stringify(seller) %>;
+    
+    onload = function() {
+        let pickupMessage = document.getElementById('pickupMessage');
+        pickupMessage.innerHTML = `Pick up your order at `;
+    }
 </script>
 </html>

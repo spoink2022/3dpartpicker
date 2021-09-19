@@ -12,8 +12,8 @@ onload = function() {
         let checkoutProduct = document.getElementById('checkoutProduct');
         checkoutProduct.value = part.id;
 
-        let checkoutUser = document.getElementById('checkoutUser');
-        checkoutUser.value = user.id;
+        let checkoutSeller = document.getElementById('checkoutSeller');
+        checkoutSeller.value = user.id;
 
         let selectedItem = document.getElementById('selectedItem');
         selectedItem.innerHTML = `${part.name} x${part.qt} - $${Math.round(part.price_20*part.qt)/100}`;
