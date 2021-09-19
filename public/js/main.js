@@ -1,6 +1,54 @@
 $( document ).ready(function() {
-    updateAvatarInfo();
-    //let popularcards = document.getElementsByClassName('popularProducts')
+
+    let popularcards = document.getElementsByClassName('MS-content')[0]
+    for(let i = 0;i<5;i++){
+        
+        let popcardinfo = parts[i]
+
+        let popid = popcardinfo['id'];//for href anchor tag around image
+        let poppartName = popcardinfo['name'];
+        let poptags = [popcardinfo['tag'],popcardinfo['tag_2']];
+        let popprice= popcardinfo['price_20'];
+        let popdollarprice = popprice/100;
+        
+        let poppartImage = popcardinfo['images'][0];
+        let popcardlink = document.createElement('a');
+        popcardlink.setAttribute('href',`http://localhost:3000/product?id=${popid}&user=1`)
+        //popcardlink.classList.add('cardlink');//css class needeed display block the link
+        popcardlink.classList.add('item');
+        let popcarddiv = document.createElement('div');
+        popcarddiv.classList.add('carddiv');//css class needeed
+        let popcardimg = document.createElement('img');
+        popcardimg.setAttribute('src', poppartImage);
+        popcardimg.setAttribute('alt', 'Photo');
+        popcardimg.classList.add('cardimg');//css class needeed
+        let popcardprice = document.createElement('p');
+        popcardprice.innerHTML = 'Price: $'+popdollarprice.toFixed(2);
+        let popcardname = document.createElement('p');
+        popcardname.innerHTML = poppartName;
+        popcardname.classList.add('cardname');//css class needeed
+        popcardlink.appendChild(popcarddiv);
+        popcarddiv.appendChild(popcardimg);
+        popcarddiv.appendChild(popcardprice);
+        popcarddiv.appendChild(popcardname);
+        //console.log(cardprice)
+        popcardprice.classList.add('cardprice');//css class needeed           
+        for (let i = 0; i < poptags.length; i++){
+            if(poptags[i]) {
+                let popcardtag = document.createElement('p');
+                popcardtag.innerHTML = poptags[i];
+                popcardtag.classList.add('cardtag');//css class needeed
+                popcarddiv.appendChild(popcardtag);
+            }
+        }
+        popularcards.append(popcardlink)
+        
+        console.log(popcardlink)
+        }
+    
+    //give each item an item class
+
+    
     let lineofcards = document.getElementsByClassName('products')
     let cardorder = [[0,1,2,3,4],[5,6,7,8,9],[10,1,2,3,4]]
     for (let i = 0;i<lineofcards.length;i++){
@@ -8,7 +56,6 @@ $( document ).ready(function() {
         for (let j=0; j<4; j++) { 
             //info on card
             let cardinfo = parts[rowOfCards[j]]
-            console.log(cardinfo)
             let id = cardinfo['id'];//for href anchor tag around image
             let partName = cardinfo['name'];
             let tags = [cardinfo['tag'],cardinfo['tag_2']];
@@ -30,7 +77,7 @@ $( document ).ready(function() {
             let cardprice = document.createElement('p');
             cardprice.innerHTML = 'Price: $'+dollarprice.toFixed(2);
             let cardname = document.createElement('p');
-            cardname.innerHTML = `<bold>${partName}</bold>`;
+            cardname.innerHTML = partName;
             cardname.classList.add('cardname');//css class needeed
             
             cardlink.appendChild(cardimg);
@@ -47,10 +94,7 @@ $( document ).ready(function() {
                 }
             }
             lineofcards[i].append(cardlink)
-            
-            console.log(cardlink)
         }
-
     }
 });
 

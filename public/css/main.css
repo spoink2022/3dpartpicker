@@ -103,7 +103,7 @@ button, input {
 .popularParts h2{
     padding-top: 40px;
     color:#DA8F2A;;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 #slider {
@@ -124,7 +124,7 @@ button, input {
     width: 18%;              
     position: relative;      
     vertical-align: top;     
-    overflow: hidden;        
+    overflow: hidden;     
     height: 250px;            
     white-space: normal;     
     padding-left: 1%;
@@ -192,7 +192,6 @@ button, input {
 .newReleases h2, .art h2, .toys h2{
     font-size:2em;
     grid-column: 1;
-    
 }
 
 .art{
@@ -236,19 +235,20 @@ footer .pages{
 }
 
 .cardlink{
-    text-align: left;
-    
-    margin: 1.5%;
+    text-align: center;
     width:22%;
+    margin: 1.5%;
     border-radius: 20px;
+    
 }
 .carddiv{
-    text-align: left;
     color:black;
 }
 .cardimg{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     width:80%;
-    padding:5px;
     height: auto;
     border-radius: 20px;
 }
@@ -256,8 +256,15 @@ footer .pages{
     color:black
 }
 .cardtag{
-    color:black
+    color:black;
+    background-color: rgb(228, 228, 228);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 10px;
 }
 .cardname{
-    color:black
+    color:black;
+
 }
