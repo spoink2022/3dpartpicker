@@ -1,12 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500&family=Rubik:wght@300;400;500&display=swap%27');
 
-button {
-    font-family: "Rubik";
-    font-weight: 500;
+* {
+    padding: 0;
+    margin: 0;
 }
 
 #map {
     height: 700px;
-    width: 100%;
+    width: 70%;
+    margin: auto;
+    border: solid 5px #DA8F2A;
+    border-radius: 25px;
+    margin-bottom: 150px;
 }
 
+body {
+    overflow-x: hidden;
+    background-color: #222324;
+    font-family: recursive;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(119, 117, 117);
+}
+
+nav {
+    display: grid;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+nav img {
+    grid-column: 1 / 2;
+    height: 50px;
+    width:auto;
+}
+
+button, input {
+    font-family: recursive;
+    border: none;
+    padding: 5px 10px;
+}
+
+#filter {
+    margin-top: 15px;
+    grid-column: 3;
+}
+
+#input {
+    grid-column: 4 / 8;
+}
+
+nav form button {
+    grid-column: 9;
+}
+
+#discover{
+    margin-top: 17px;
+    grid-column:10;
+    color:#DA8F2A
+}
+
+#account{
+    margin-top: 20px;
+    grid-column:11;
+    color:#DA8F2A;
+}
+
+.info {
+    font-family: "Rubik";
+    font-size: 50pt;
+    padding-top: 150px;
+    padding-bottom: 150;
+    color: #DA8F2A;
+    text-align: center;
+}
+
+.info h1 {
+    font-weight: 400;
+}
+
+.info h4 {
+    padding-top: 40px;
+    padding-bottom: 150px;
+    font-weight: 200;
+    font-size: 20pt;
+}
+
+.customerInfo {
+    padding-top: 50px;
+    text-align: center;
+    background-color: rgb(119, 117, 117);
+}
+
+.mapInfo {
+    padding-top: 0;
+    padding-bottom: 0;
+    color: black;
+    text-align: left;
+}

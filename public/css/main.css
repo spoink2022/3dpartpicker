@@ -3,13 +3,13 @@
     margin: 0;
 }
 
-body{
+body {
     overflow-x: hidden;
     background-color: white;
     font-family: recursive;
     text-align: center;
 }
-a{
+a {
     text-decoration: none;
     color: rgb(119, 117, 117);
 }
@@ -22,7 +22,7 @@ nav {
     
 }
 
-nav img{
+nav img {
     grid-column: 1 / 2;
     height: 50px;
     width:auto;
@@ -38,7 +38,6 @@ button,  input {
     font-family: rubik;
     padding-bottom: 15px;
 }
-
 
 
 #filter{
@@ -164,7 +163,6 @@ nav form button{
     grid-auto-rows: minmax(100px, auto);
     gap:20px;
 }
-
 
 .newReleases{
     grid-row: 2;

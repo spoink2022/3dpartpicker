@@ -16,7 +16,7 @@ onload = function() {
         checkoutUser.value = user.id;
 
         let selectedItem = document.getElementById('selectedItem');
-        selectedItem.innerHTML = `${part.name} x${part.qt} - $${Math.round(part.price_20*part.qt)/100}`;
+        selectedItem.innerHTML = `${part.name} x${part.qt} - $${(Math.round(part.price_20*part.qt)/100).toFixed(2)}`;
 
         let checkoutElements = document.getElementById('checkoutElements');
         checkoutElements.style.visibility = 'visible';
@@ -143,11 +143,11 @@ function handleMarkers(position,sellers,map)
         })
         
         let sellerInfo = 
-        `<body style='text-align:center'\>
-        <h3><u>${sellers[i].first_name} ${sellers[i].last_name}</u></h3\>
-        <h4>Rating: ${sellers[i].rating}</h4\>
-        <p>Sales: ${sellers[i].transactions}</p\>
-        <p>Address: ${sellers[i].address}</p\>
+        `<body\>
+        <h3 class="mapInfo"><u>${sellers[i].first_name} ${sellers[i].last_name}</u></h3\><br>
+        <h3 class="mapInfo">Rating: ${sellers[i].rating}</h3\>
+        <p class="mapInfo">Sales: ${sellers[i].transactions}</p\>
+        <p class="mapInfo">Address: ${sellers[i].address}</p\>
         </body>`
         
         let sellerInfoWindow = new google.maps.InfoWindow({

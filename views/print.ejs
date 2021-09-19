@@ -13,29 +13,50 @@
         let avatarUrl = '<%- avatarUrl %>';
         let sellers = <%- JSON.stringify(sellers) %>;
     </script>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
 
-    <div id="checkoutElements" style="visibility: hidden;">
-      <h2 id="selectedName">- No Printer Selected -</h2>
-      <h4 id="selectedAddress"></h4>
-      <img id="selectedProfile" src="">
-      <h2 id="selectedItem"></h2>
+    <nav>
+        <a href="/"><img src="../images/logo_text.png" alt="logo"></a>
+        <div class="search">
+            <form action="/searchroute" method="POST">
+                <button id="filter">Filter</button>
+                <input type="text" placeholder="Type anything..." name="search" id="input">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+        <!--filler routes-->
+        <a href="/print" id="discover"><p>Discover Printers</p></a>
+    </nav>
 
-      <form id="checkoutForm" action="/create-checkout-session" method="post">
-        <input id="checkoutQt" name="qt" type="hidden">
-        <input id="checkoutProduct" name="product" type="hidden">
-        <input id="checkoutUser" name="user" type="hidden">
-        <button id="checkoutButton" type="submit" disabled>Checkout</button>
+    <section class="info"> 
+      <h1>YOU'RE ALMOST THERE!</h1>
+      <h4>Just select a nearby seller and you'll be on your way.</h4>
+      <!--The div element for the map -->
+      <div id="map"></div>
+
+    </section>
+
+    <section class="customerInfo">
+      <div id="checkoutElements" style="visibility: hidden;">
+        <h2 id="selectedName">- No Printer Selected -</h2>
+        <h4 id="selectedAddress"></h4>
+        <img id="selectedProfile" src="">
+        <h2 id="selectedItem"></h2>
+
+        <form id="checkoutForm" action="/create-checkout-session" method="post">
+          <input id="checkoutQt" name="qt" type="hidden">
+          <input id="checkoutProduct" name="product" type="hidden">
+          <input id="checkoutUser" name="user" type="hidden">
+          <button id="checkoutButton" type="submit" disabled>Checkout</button>
+        </form>
+      </div>
+
+      <form id="coordinateForm" action="/findSellers" method="post">
+        <input id="latCoord" name="lat" type="hidden">
+        <input id="lonCoord" name="lon" type="hidden">
+        <button id="coordinateButton" type="submit" style="visibility:hidden;"></button>
       </form>
-    </div>
-
-    <form id="coordinateForm" action="/findSellers" method="post">
-      <input id="latCoord" name="lat" type="hidden">
-      <input id="lonCoord" name="lon" type="hidden">
-      <button id="coordinateButton" type="submit" style="visibility:hidden;"></button>
-    </form>
+  </section>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
