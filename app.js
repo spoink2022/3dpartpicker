@@ -32,14 +32,12 @@ app.listen(config.PORT, () => {
 });
 
 if (config.SSL) {
-    if (PROD) {
-        app.use(function(req, res, next) {
-            if(!req.secure) {
-              return res.redirect(['https://', req.get('Host'), req.url].join(''));
-            }
-            next();
-        });
-    }
+    app.use(function(req, res, next) {
+        if(!req.secure) {
+            return res.redirect(['https://', req.get('Host'), req.url].join(''));
+        }
+        next();
+    });
 
     var privateKey  = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/privkey.pem', 'utf8');
     var certificate = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/cert.pem', 'utf8');
