@@ -53,6 +53,10 @@ button, input {
     padding: 5px 10px;
 }
 
+nav button, input {
+    font-size: 13.5px;
+}
+
 #filter {
     margin-top: 15px;
     grid-column: 3;

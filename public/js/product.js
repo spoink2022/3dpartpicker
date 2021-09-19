@@ -11,6 +11,9 @@ onload = async function() {
         hiddenUserInput.value = user ? user.id : false;
         let hiddenPartInput = document.getElementById('hiddenPartInput');
         hiddenPartInput.value = part.id;
+
+        let checkout = document.getElementById('co');
+        checkout.style.visibility = "visible";
     } else {
         // erase checkout form
         let checkoutForm = document.getElementById('checkoutForm');
