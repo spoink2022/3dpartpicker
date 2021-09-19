@@ -139,3 +139,10 @@ button, input {
 #selectedItem {
     padding-bottom: 20px;
 }
+
+footer{
+    background-color: black;
+    color:white;
+    height:150px;
+    margin-top: 100px;
+}

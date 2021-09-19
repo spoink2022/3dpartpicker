@@ -1,9 +1,11 @@
 $( document ).ready(function() {
+    updateAvatarInfo();
 
+    
     let popularcards = document.getElementsByClassName('MS-content')[0]
     for(let i = 0;i<5;i++){
         
-        let popcardinfo = parts[i]
+        let popcardinfo = parts[i];
 
         let popid = popcardinfo['id'];//for href anchor tag around image
         let poppartName = popcardinfo['name'];
@@ -42,8 +44,6 @@ $( document ).ready(function() {
             }
         }
         popularcards.append(popcardlink)
-        
-        console.log(popcardlink)
         }
     
     //give each item an item class
@@ -55,7 +55,7 @@ $( document ).ready(function() {
         let rowOfCards = cardorder[i]
         for (let j=0; j<4; j++) { 
             //info on card
-            let cardinfo = parts[rowOfCards[j]]
+            let cardinfo = parts[rowOfCards[j]];
             let id = cardinfo['id'];//for href anchor tag around image
             let partName = cardinfo['name'];
             let tags = [cardinfo['tag'],cardinfo['tag_2']];
