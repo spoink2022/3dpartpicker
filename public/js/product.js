@@ -16,6 +16,9 @@ onload = async function() {
 }
 
 function updateTexts() {
+    let discover = document.getElementById('discover');
+    if (!user) { discover.style.visibility = 'visible'; }
+    
     let partTitle = document.getElementById('partTitle');
     partTitle.innerHTML = part.name;
 
