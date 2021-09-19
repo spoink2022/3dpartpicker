@@ -20,8 +20,7 @@
             </form>
         </div>
         <!--filler routes-->
-        <a href="/print?user=1" id="discover"><p>Discover Printer</p></a>
-        <a href="/account" id="account"><p>Account</p></a>
+        <a href="/print" id="discover"><p>Discover Printers</p></a>
         <img src="" alt="cart" id="cart"><!--dropdown-->
 
     </nav>
@@ -89,6 +88,8 @@
 <script src="../js/main.js"></script>
 <script>
     let parts = <%- JSON.stringify(parts) %>;
+    let user = <%- JSON.stringify(user) %>;
+    let avatarUrl = '<%- avatarUrl %>';
     $('#slider').multislider();
 </script>
 </html>
