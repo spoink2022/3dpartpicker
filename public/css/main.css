@@ -28,7 +28,7 @@ nav img{
     width:auto;
 }
 
-button {
+button,  input {
     font-family: recursive;
     border: none;
     padding: 5px 10px;
@@ -48,16 +48,19 @@ nav form button{
 }
 
 #discover{
+    margin-top: 20px;
     grid-column:10;
     color:#DA8F2A
 }
 
 #account{
+    margin-top: 20px;
     grid-column:11;
     color:#DA8F2A
 }
 
 #cart{
+    margin-top: 15px;
     grid-column:12;
 }
 
