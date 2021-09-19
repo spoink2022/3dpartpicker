@@ -197,6 +197,7 @@ hr{
     margin-right: auto;
     max-width: 1120px;
     width: 100%;
+    margin-top: 10px;
 }
 .art{
     grid-row: 3;
