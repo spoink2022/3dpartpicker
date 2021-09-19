@@ -20,6 +20,7 @@
   "dependencies": {
     "ejs": "3.1.6",
     "express": "4.17.1",
+    "fs": "0.0.1-security",
     "node-stl": "0.7.2",
     "nodemon": "2.0.12",
     "pg": "8.7.1",
