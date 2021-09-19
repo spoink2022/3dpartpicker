@@ -26,21 +26,31 @@ a {
 }
 
 nav {
-    display: grid;
     background-color: black;
     color: white;
     text-align: center;
 }
 
 nav img {
-    grid-column: 1 / 2;
     height: 50px;
     width:auto;
+    padding-bottom: 16px;
+}
+
+nav #logo {
+    margin-top: 12px;
+    margin-left: 32px;
+    margin-right: 32px;
+    float: left;
+}
+
+nav #search {
+    float: left;
 }
 
 button, input {
-    margin-top: 40px;
-    font-family: recursive;
+    margin-top: 20px;
+    font-family: "Recursive";
     border: none;
     padding: 5px 10px;
     font-size: 20px;
@@ -55,14 +65,28 @@ button, input {
     grid-column: 4 / 8;
 }
 
-nav form button {
-    grid-column: 9;
+#discover{
+    margin-top: 12px;
+    padding-top: 16px;
+    float: left;
+    color:#DA8F2A;
+    margin-left: 64px;
 }
 
-#discover{
-    margin-top: 17px;
-    grid-column:10;
-    color:#DA8F2A
+#avatar {
+    float: right;
+}
+
+#avatarText {
+    float: left;
+    padding: 24px;
+}
+
+#avatarImg {
+    float: right;
+    padding: 8px;
+    margin-right: 16px;
+    border-radius: 50%;
 }
 
 #account{
