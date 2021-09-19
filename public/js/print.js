@@ -15,11 +15,29 @@ onload = function() {
         let checkoutUser = document.getElementById('checkoutUser');
         checkoutUser.value = user.id;
 
-        let checkoutButton = document.getElementById('checkoutButton');
-        checkoutButton.style.visibility = 'visible';
+        let checkoutElements = document.getElementById('checkoutElements');
+        checkoutElements.style.visibility = 'visible';
     }
 }
 
+function updateSelectedPrinter(s) {
+    if (!part) {
+        return;
+    }
+
+    let distanceKm = Math.round(Math.sqrt(Math.pow(user.lat - s.lat, 2) + Math.pow(user.lon - s.lon, 2)) * 111 * 10)/10;
+
+    let selectedName = document.getElementById('selectedName');
+    selectedName.innerHTML = s.first_name + ' ' + s.last_name + ' - ' + distanceKm + 'km';
+
+    let selectedAddress = document.getElementById('selectedAddress');
+    selectedAddress.innerHTML = s.address;
+
+    let selectedProfile = document.getElementById('selectedProfile');
+    selectedProfile.src = s.avatar_url;
+}
+
+// MAPS
 function initMap() {
     const def = { lat: 43.6532, lng: -79.3832 };
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -152,6 +170,8 @@ function handleMarkers(position,sellers,map)
             {
             sellerMarker.setAnimation(google.maps.Animation.BOUNCE);
             }
+
+            updateSelectedPrinter(sellers[i]);
         });
 
         activeMarkers.push(sellerMarker);
