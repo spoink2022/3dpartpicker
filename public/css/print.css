@@ -39,11 +39,10 @@ nav img {
 }
 
 button, input {
-    margin-top: 40px;
+    margin-top: 15px;
     font-family: recursive;
     border: none;
     padding: 5px 10px;
-    font-size: 20px;
 }
 
 #filter {
@@ -109,7 +108,7 @@ nav form button {
 }
 
 #selectedAddress {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 #selectedProfile {
