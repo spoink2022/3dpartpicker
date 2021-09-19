@@ -2,18 +2,19 @@ $( document ).ready(function() {
 
     //let popularcards = document.getElementsByClassName('popularProducts')
     let lineofcards = document.getElementsByClassName('products')
-    let cardorder = [[1,2,3,4,5],[6,7,8,9,10],[11,1,2,3,4]]
+    let cardorder = [[0,1,2,3,4],[5,6,7,8,9],[10,1,2,3,4]]
     for (let i = 0;i<lineofcards.length;i++){
         let rowOfCards = cardorder[i]
-        console.log(lineofcards[i])
-        for (let j=0; j<5; j++) { 
+        for (let j=0; j<4; j++) { 
             //info on card
-            let cardinfo = rowOfCards[j]
+            let cardinfo = parts[rowOfCards[j]]
+            console.log(cardinfo)
             let id = cardinfo['id'];//for href anchor tag around image
             let partName = cardinfo['name'];
             let tags = [cardinfo['tag'],cardinfo['tag_2']];//condiiton needed to check if tag is null
             let price= cardinfo['price_20'];
             let dollarprice = price/100;
+            //console.log(cardinfo['price'])
             let partImage = cardinfo['images'][0];
 
             //creating card
@@ -26,21 +27,27 @@ $( document ).ready(function() {
             cardimg.setAttribute('src', partImage);
             cardimg.setAttribute('alt', 'Photo');
             cardimg.classList.add('cardimg');//css class needeed
-            let cardprice = document.createTextNode(dollarprice);
+            let cardprice = document.createElement('p');
+            cardprice.innerHTML = '$'+dollarprice.toFixed(2);
+            let cardname = document.createElement('p');
+            cardname.innerHTML = partName;
+            cardname.classList.add('cardname');//css class needeed
+            cardlink.appendChild(cardimg);
+            cardlink.appendChild(cardname);
+            cardlink.appendChild(cardprice);
+            //console.log(cardprice)
             cardprice.classList.add('cardprice');//css class needeed           
             for (let i = 0; i < tags.length; i++){
                 if(tags[i]) {
-                    let cardtag = document.createTextNode(tag[i]);
+                    let cardtag = document.createElement('p');
+                    cardtag.innerHTML = tags[i];
                     cardtag.classList.add('cardtag');//css class needeed
+                    cardlink.appendChild(cardtag);
                 }
             }
-           let cardname = document.createTextNode(partName);
-            cardname.classList.add('cardname');//css class needeed
-            carddiv.appendChild(cardimg);
-            carddiv.appendChild(cardprice);
-            carddiv.appendChild(cardtags);
-            carddiv.appendChild(cardimg);
-            lineofcards[i].append(carddiv)
+            lineofcards[i].append(cardlink)
+            
+            console.log(cardlink)
         }
 
     }

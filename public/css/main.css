@@ -218,7 +218,7 @@ footer .pages{
 
 }
 .cardlink{
-
+    display:block;
 }
 .cardimg{
 
@@ -230,5 +230,5 @@ footer .pages{
 
 }
 .cardname{
-    
+
 }
