@@ -14,8 +14,8 @@
         let sellers = <%- JSON.stringify(sellers) %>;
     </script>
     <nav>
-        <a href="/"><img src="../images/logo_text.png" alt="logo"></a>
-        <div class="search">
+        <a href="/" id="logo"><img src="../images/logo_text.png" alt="logo"></a>
+        <div id="search" class="search">
             <form action="/searchroute" method="POST">
                 <button id="filter">Filter</button>
                 <input type="text" placeholder="Type anything..." name="search" id="input">
@@ -24,7 +24,11 @@
         </div>
         
         <!--filler routes-->
-        <a href="/print" id="discover"><p>Discover Printers</p></a>
+        <div id="avatar">
+          <a id="avatarText"></a>
+          <img id="avatarImg">
+        </div>
+        <div style="clear:right;"></div>
     </nav>
 
     <section class="info"> 

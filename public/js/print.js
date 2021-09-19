@@ -5,6 +5,18 @@ let lastOpenedMarker = null;
 
 // FUNCTION
 onload = function() {
+    // login        
+    let avatarText = document.getElementById('avatarText');
+    if (part) {
+        avatarText.innerHTML = user.first_name + ' ' + user.last_name;
+    } else {
+        avatarText.innerHTML = 'Login';
+        avatarText.href = `/?user=1`;
+    }
+    
+    let avatarImg = document.getElementById('avatarImg');
+    avatarImg.src = avatarUrl;
+
     if (!part)
     {
         let caption1 = document.getElementById('caption1');
