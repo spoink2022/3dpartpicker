@@ -83,11 +83,13 @@ button,  input {
 .market{
     display: grid;
     grid-template-columns:repeat(8,1fr);
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(80px, auto);
 }
 
-.popularParts {
+.popularParts h2{
     padding-top: 40px;
+    color:#DA8F2A;;
+    font-size: 2em;
 }
 
 #slider {
@@ -180,14 +182,14 @@ button,  input {
 }
 
 .art{
-    grid-row: 4;
+    grid-row: 3;
     display: grid;
     grid-template-columns: 1fr;
     color: #DA8F2A;
 }
 
 .toys{
-    grid-row: 6;
+    grid-row: 4;
     display: grid;
     grid-template-columns: 1fr;
     color: #DA8F2A;
@@ -220,26 +222,28 @@ footer .pages{
 }
 
 .cardlink{
-    background-color: grey;
-    margin: 1%;
+    text-align: left;
+    
+    margin: 1.5%;
     width:22%;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .carddiv{
-    
+    text-align: left;
+    color:black;
 }
 .cardimg{
     width:80%;
     padding:5px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .cardprice{
-
+    color:black
 }
 .cardtag{
-
+    color:black
 }
 .cardname{
-
+    color:black
 }

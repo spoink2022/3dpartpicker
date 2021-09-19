@@ -28,9 +28,9 @@ $( document ).ready(function() {
             cardimg.setAttribute('alt', 'Photo');
             cardimg.classList.add('cardimg');//css class needeed
             let cardprice = document.createElement('p');
-            cardprice.innerHTML = '$'+dollarprice.toFixed(2);
+            cardprice.innerHTML = 'Price: $'+dollarprice.toFixed(2);
             let cardname = document.createElement('p');
-            cardname.innerHTML = partName;
+            cardname.innerHTML = `<bold>${partName}</bold>`;
             cardname.classList.add('cardname');//css class needeed
             
             cardlink.appendChild(cardimg);
