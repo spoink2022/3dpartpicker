@@ -36,7 +36,13 @@ function initMap() {
             // ask user for location, true if they accept  
             let userPosition = navigator.geolocation.getCurrentPosition(); 
             user = {latitude: userPosition.coords.latitude, longitude: userPosition.coords.longitude};
-            fetch(action='/findSellers',{method:"POST", body: {lat: user.latitude, lon: user.longitude}});
+            // autofill the form
+            let latCoord = document.getElementById('latCoord');
+            latCoord.value = user.latitude;
+            let lonCoord = document.getElementById('lonCoord');
+            lonCoord.value = user.longitude;
+            let coordinateButton = document.getElementById('coordinateButton');
+            coordinateButton.click();
         });
     }
     else if (sellers)

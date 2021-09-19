@@ -16,6 +16,15 @@
     <h3>My Google Maps Demo</h3>
     <!--The div element for the map -->
     <div id="map"></div>
+    <form id="checkoutForm">
+      <input id="" name="">
+    </form>
+
+    <form action="/findSeller" action="post" id="coordinateForm">
+      <input id="latCoord" name="lat" type="hidden">
+      <input id="lonCoord" name="lon" type="hidden">
+      <button id="coordinateButton" type="submit"></button>
+    </form>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
