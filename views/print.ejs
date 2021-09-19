@@ -1,1 +1,38 @@
-<h1>PRINT</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add Map</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/print.css" />
+    <script src="../js/print.js"></script>
+  </head>
+  <body>
+    <script>
+        let part = <%- JSON.stringify(part) %>;
+        let user = <%- JSON.stringify(user) %>;
+        let avatarUrl = '<%- avatarUrl %>';
+        let sellers = <%- JSON.stringify(sellers) %>;
+    </script>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <form id="checkoutForm" action="/create-checkout-session" method="post">
+      <input id="checkoutQt" name="qt" type="hidden">
+      <input id="checkoutProduct" name="product" type="hidden">
+      <input id="checkoutUser" name="user" type="hidden">
+      <button id="checkoutButton" type="submit" style="visibility: hidden;">Checkout</button>
+    </form>
+
+    <form id="coordinateForm" action="/findSellers" method="post">
+      <input id="latCoord" name="lat" type="hidden">
+      <input id="lonCoord" name="lon" type="hidden">
+      <button id="coordinateButton" type="submit" style="visibility:hidden;"></button>
+    </form>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkJ_T9KxMbO4VFLl5kXveos7ZvYqrTbEs&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>

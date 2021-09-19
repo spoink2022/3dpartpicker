@@ -10,20 +10,18 @@
 </head>
 <body>
     <nav>
-            
         <a href="/"><img src="../images/logo_text.png" alt="logo"></a>
         <div class="search">
             <form action="/searchroute" method="POST">
-                <button id="filter">filter</button>
-                <input type="text" placeholder="Search.." name="search" id="input">
+                <button id="filter">Filter</button>
+                <input type="text" placeholder="Type anything..." name="search" id="input">
                 <button type="submit">Search</button>
             </form>
         </div>
+        
         <!--filler routes-->
-        <a href="/print?user=1" id="discover"><p>Discover Printer</p></a>
-        <a href="/account" id="account"><p>Account</p></a>
+        <a href="/print" id="discover"><p>Discover Printers</p></a>
         <img src="" alt="cart" id="cart"><!--dropdown-->
-
     </nav>
 
     <section class="about">
@@ -85,6 +83,8 @@
 <script src="../js/test.js"></script><!--linked to a test.js document-->
 <script>
     let parts = <%- JSON.stringify(parts) %>;
+    let user = <%- JSON.stringify(user) %>;
+    let avatarUrl = '<%- avatarUrl %>';
     $('#slider').multislider();
 </script>
 </html>

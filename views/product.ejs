@@ -13,7 +13,6 @@
 <body>
     <header>
         <a href=""><img id="logoImg" src="../images/logo_text.png" alt="logo"></a>
-
         <div id="searchBar">
             <form action="/searchroute" method="POST">
                 <button id="filter">filter</button>
@@ -22,7 +21,7 @@
             </form>
         </div>
         <img id="avatarImg">
-        <h2 id="avatarText"></h2>
+        <a id="avatarText"></a>
         <div style="clear:right;"></div>
     </header>
     <nav>
@@ -33,14 +32,12 @@
         <div id="imageList"></div>
         <ul id="partDescription"></ul>
         <!-- -->
-        <a href="/discover" id="discover"><p>Discover Printer</p></a>
-        <a href="/account" id="account"><p>Account</p></a>
         <img src="" alt="cart" id="cart"><!--dropdown-->
 
     </nav>
 
     <div>
-        <form id="shop" action="/print" method="post">
+        <form id="checkoutForm" action="/print" method="post">
             <input id="hiddenUserInput" type="hidden" name="user">
             <input id="hiddenPartInput" type="hidden" name="part">
             <input name="qt" type="number" value=0>
@@ -57,9 +54,8 @@
 </body>
 <script>
     let part = <%- JSON.stringify(part); %>;
+    let user = <%- JSON.stringify(user); %>;
     let avatarUrl = '<%- avatarUrl %>';
-    let fullName = '<%- fullName %>';
-    let userid = '<%- userid %>';
 </script>
 
 <script src="../js/product.js"></script>

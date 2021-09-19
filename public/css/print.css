@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500&family=Rubik:wght@300;400;500&display=swap%27');
+
+button {
+    font-family: "Rubik";
+    font-weight: 500;
+}
+
+#map {
+    height: 700px;
+    width: 100%;
+}
+

@@ -1,9 +1,6 @@
 $( document ).ready(function() {
-
-
-    let cards = document.getElementsByClassName('products')
-    console.log(cards)
-    let cardsinfo = []
+    let cards = document.getElementsByClassName('products');
+    let cardsinfo = [];
     for (let i = 0; i < parts.length; i++) {
         //access tags, price, image, name 
         let id = parts[i]['id'];
@@ -15,7 +12,7 @@ $( document ).ready(function() {
         let card = `
             <div class='productCard'>
 
-                <a href = "http://localhost:3000/product?id=${id}&user=1"><img src='${partImage}' alt='Photo'></img></a>
+                <a href = "http://localhost:3000/product?id=${id}${user ? `&user=${user.id}` : ''}"><img src='${partImage}' alt='Photo'></img></a>
                 <p class='price'>Price: $${dollarprice.toFixed(2)}</p>
                 <p class='name'>${partName}</p>
                 <div class='tags'>
@@ -42,6 +39,4 @@ $( document ).ready(function() {
             }
         }
     }
-    
-
 });
