@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+    updateAvatarInfo();
     //let popularcards = document.getElementsByClassName('popularProducts')
     let lineofcards = document.getElementsByClassName('products')
     let cardorder = [[0,1,2,3,4],[5,6,7,8,9],[10,1,2,3,4]]
@@ -53,3 +53,12 @@ $( document ).ready(function() {
 
     }
 });
+
+function updateAvatarInfo() {
+    let avatarText = document.getElementById('avatarText');
+    avatarText.innerHTML = user ? user.first_name + ' ' + user.last_name : 'Login';
+    if (!user) { avatarText.href = '/?user=1'; }
+
+    let avatarImg = document.getElementById('avatarImg');
+    avatarImg.src = avatarUrl;
+}
