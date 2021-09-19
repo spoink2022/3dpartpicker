@@ -48,17 +48,18 @@ button,  input {
 }
 
 #input{
-    grid-column: 4 / 8;
+    grid-column: 4 / 6;
 }
 
-nav form button{
-    grid-column: 9;
+#searchButton {
+    grid-column: 7;
 }
 
 #discover{
     margin-top: 17px;
-    grid-column:10;
-    color:#DA8F2A
+    grid-column:8;
+    color:#DA8F2A;
+    text-align: left;
 }
 
 #account{
