@@ -30,24 +30,25 @@ function initMap() {
     locationButton.style.boxShadow = "1px 2px 4px rgba(0,0,0,.3)";
     locationButton.style.color = "#DA8F2A";
 
-    if (!user)
+    if (!sellers)
     {
         locationButton.addEventListener("click", () => {
             // ask user for location, true if they accept  
             let userPosition = navigator.geolocation.getCurrentPosition(); 
-            let pos = {latitude: userPosition.coords.latitude, longitude: userPosition.coords.longitude};
-            handleMarkers(pos,map);
+            let user = {latitude: userPosition.coords.latitude, longitude: userPosition.coords.longitude};
+            fetch(action='/findSellers',{method:"POST", body: {lat: user.latitude, lon: user.longitude}});
         });
     }
-    else
+    else if (sellers)
     {
-        handleMarkers({latitude: user.lat, longitude: user.lon}, map);
+        handleMarkers(user,sellers,map);
     }
+    
 }
 
 // FUNCTIONS 
 
-function handleMarkers(position,map)
+function handleMarkers(position,sellers,map)
 {
     const userPosition = { lat: position.latitude, lng: position.longitude };
     let userIcon = {
