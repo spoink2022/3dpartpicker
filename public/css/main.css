@@ -134,22 +134,14 @@ button, input {
     border-radius: 10px;
 }
 
-#slider .MS-content .item:hover {
-    transform :scale(1.1);
-}
 
 #slider .MS-controls button {
     position: absolute;      
     top: 55px;
     height: 50px;
     opacity: 0.4;
-    transition: transform 0.5s;
     margin-left: 7%;
     margin-right: 7%;
-}
-
-#slider .MS-controls button:hover {
-    transform: scale(1.05)
 }
 
 #slider .MS-controls .MS-left {
@@ -205,6 +197,7 @@ hr{
     margin-right: auto;
     max-width: 1120px;
     width: 100%;
+    margin-top: 10px;
 }
 .art{
     grid-row: 3;
