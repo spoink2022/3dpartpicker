@@ -66,7 +66,7 @@ $( document ).ready(function() {
 
             //creating card
             let cardlink = document.createElement('a');
-            cardlink.setAttribute('href',`http://localhost:3000/product?id=${id}${user ? `&user=${user.id}` : ''}`)
+            cardlink.setAttribute('href',`/product?id=${id}${user ? `&user=${user.id}` : ''}`)
             cardlink.classList.add('cardlink');//css class needeed display block the link
             let carddiv = document.createElement('div');
             carddiv.classList.add('carddiv');//css class needeed
