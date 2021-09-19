@@ -83,3 +83,10 @@ button, input {
     margin-right: 16px;
     border-radius: 50%;
 }
+
+footer{
+    background-color: black;
+    color:white;
+    height:150px;
+    margin-top: 100px;
+}
