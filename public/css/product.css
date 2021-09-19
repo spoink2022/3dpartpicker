@@ -82,3 +82,55 @@ button, input {
     margin-right: 16px;
     border-radius: 50%;
 }
+
+footer{
+    background-color: black;
+    color:white;
+    height:150px;
+    margin-top: 100px;
+}
+/* SLIDESHOW RELATED CSS */
+
+#imageList {
+    max-width: 1000px;
+    position: relative; 
+    margin: auto;
+}
+
+.blur {
+    -webkit-animation-name: blur;
+    -webkit-animation-duration: 1.5s;
+    animation-name: blur;
+    animation-duration: 3s;
+  }
+
+@keyframes blur {
+    from {opacity: .5}
+    to {opacity: 0.9}
+}
+
+@-webkit-keyframes blur {
+    from {opacity: .5}
+    to {opacity: .9}
+}
+
+/* CLASSES FOR FORMATTING */
+.productName {
+    
+}
+
+.productTags {
+
+}
+
+.slideShow {
+
+}
+
+.productInfo {
+
+}
+
+.checkout {
+
+}

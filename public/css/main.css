@@ -209,24 +209,12 @@ button, input {
 }
 
 footer{
-    background-color: #DA8F2A;
+    background-color: black;
     color:white;
-    display: grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-template-rows: 200px;
-    gap: 50px;
-    text-align: center;
+    height:150px;
     margin-top: 100px;
-    
 }
 
-footer .social {
-    grid-column:2;   
-}
-
-footer .pages{
-    grid-column:3;   
-}
 
 /*CARDS css*/
 .products{
