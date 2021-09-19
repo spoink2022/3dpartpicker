@@ -53,7 +53,6 @@ button, input {
     font-family: "Recursive";
     border: none;
     padding: 5px 10px;
-    font-size: 20px;
 }
 
 #filter {
@@ -133,7 +132,7 @@ button, input {
 }
 
 #selectedAddress {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 #selectedProfile {
