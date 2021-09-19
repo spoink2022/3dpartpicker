@@ -5,11 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/success.css">
     <title>3DPartPicker</title>
 </head>
 <body>
+    <nav>
+        <a href="/"><img src="../images/logo_text.png" alt="logo"></a>
+    </nav>
+    <h1 id="title">Success!</h1>
     <h1>Your order is on its way!</h1>
-    <h3 id="pickupMessage"></h3>
+    <h3>When you are notified, pick up your order at</h3>
+    <h2 id="pickupMessage"></h2>
+    <a href="/?user=1"><p>Back to Home</p></a>
 </body>
 
 
@@ -20,7 +27,7 @@
     
     onload = function() {
         let pickupMessage = document.getElementById('pickupMessage');
-        pickupMessage.innerHTML = `Pick up your order at `;
+        pickupMessage.innerHTML = seller.address;
     }
 </script>
 </html>
