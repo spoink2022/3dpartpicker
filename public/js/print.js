@@ -35,7 +35,7 @@ function initMap() {
         locationButton.addEventListener("click", () => {
             // ask user for location, true if they accept  
             let userPosition = navigator.geolocation.getCurrentPosition(); 
-            let user = {latitude: userPosition.coords.latitude, longitude: userPosition.coords.longitude};
+            user = {latitude: userPosition.coords.latitude, longitude: userPosition.coords.longitude};
             fetch(action='/findSellers',{method:"POST", body: {lat: user.latitude, lon: user.longitude}});
         });
     }
@@ -43,7 +43,7 @@ function initMap() {
     {
         handleMarkers(user,sellers,map);
     }
-    
+
 }
 
 // FUNCTIONS 
