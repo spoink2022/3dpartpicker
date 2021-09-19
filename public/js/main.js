@@ -11,7 +11,6 @@ $( document ).ready(function() {
         let tags = [parts[i]['tag'],parts[i]['tag_2']];
         let price= parts[i]['price_20'];
         let dollarprice = price/100;
-        console.log(dollarprice)
         let partImage = parts[i]['images'][0];
         let card = `
             <div class='productCard'>
