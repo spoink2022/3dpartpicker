@@ -4,6 +4,21 @@ let lastOpenedMarker = null;
 
 
 // FUNCTION
+onload = function() {
+    if (part) {
+        let checkoutQt = document.getElementById('checkoutQt');
+        checkoutQt.value = part.qt;
+
+        let checkoutProduct = document.getElementById('checkoutProduct');
+        checkoutProduct.value = part.id;
+
+        let checkoutUser = document.getElementById('checkoutUser');
+        checkoutUser.value = user.id;
+
+        let checkoutButton = document.getElementById('checkoutButton');
+        checkoutButton.style.visibility = 'visible';
+    }
+}
 
 function initMap() {
     const def = { lat: 43.6532, lng: -79.3832 };
@@ -11,23 +26,23 @@ function initMap() {
         zoom: 5,
         center: def,
     });
-    // if user is logged in, don't display discover button
-    const locationButton = document.createElement("button");
-    locationButton.textContent = "Discover 3D Printers";  // element text
-    locationButton.classList.add("discoverbutton");  // add this as a class attribute
-    map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-
-    // style the discover button
-    locationButton.style.fontFamily = "Rubik";
-    locationButton.style.cursor = "pointer";
-    locationButton.style.border = "none"; 
-    locationButton.style.marginTop = "20px";
-    locationButton.style.padding = "15px"; 
-    locationButton.style.boxShadow = "1px 2px 4px rgba(0,0,0,.3)";
-    locationButton.style.color = "#DA8F2A";
 
     if (!sellers)
     {
+        const locationButton = document.createElement("button");
+        locationButton.textContent = "Discover 3D Printers";  // element text
+        locationButton.classList.add("discoverbutton");  // add this as a class attribute
+        map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+
+        // style the discover button
+        locationButton.style.fontFamily = "Rubik";
+        locationButton.style.cursor = "pointer";
+        locationButton.style.border = "none"; 
+        locationButton.style.marginTop = "20px";
+        locationButton.style.padding = "15px"; 
+        locationButton.style.boxShadow = "1px 2px 4px rgba(0,0,0,.3)";
+        locationButton.style.color = "#DA8F2A";
+
         locationButton.addEventListener("click", () => {
             // ask user for location, true if they accept  
             navigator.geolocation.getCurrentPosition((position) => {
@@ -53,7 +68,7 @@ function initMap() {
 
 function handleMarkers(position,sellers,map)
 {
-    const userPosition = { lat: position.latitude, lng: position.longitude };
+    const userPosition = { lat: position.lat, lng: position.lon };
     let userIcon = {
         url: "https://cdn4.iconfinder.com/data/icons/devine_icons/Black/PNG/Folder%20and%20Places/Home.png",
         scaledSize: new google.maps.Size(50, 50), 
@@ -82,15 +97,15 @@ function handleMarkers(position,sellers,map)
         // determine colour of marker
         let icon = "http://labs.google.com/ridefinder/images/mm_20_red.png";
         
-        if (sellers[i].ratings > 4)
+        if (sellers[i].rating > 4)
         {
             icon = "http://labs.google.com/ridefinder/images/mm_20_green.png";
         }
-        else if (sellers[i].ratings > 3)
+        else if (sellers[i].rating > 3)
         {
             icon = "http://labs.google.com/ridefinder/images/mm_20_yellow.png";
         }
-        else if (sellers[i].ratings > 2)
+        else if (sellers[i].rating > 2)
         {
             icon = "http://labs.google.com/ridefinder/images/mm_20_orange.png";
         }
@@ -106,8 +121,8 @@ function handleMarkers(position,sellers,map)
         let sellerInfo = 
         `<body style='text-align:center'\>
         <h3><u>${sellers[i].first_name} ${sellers[i].last_name}</u></h3\>
-        <h4>Rating: ${sellers[i].ratings}</h4\>
-        <p>Sales: ${sellers[i].sales}</p\>
+        <h4>Rating: ${sellers[i].rating}</h4\>
+        <p>Sales: ${sellers[i].transactions}</p\>
         <p>Address: ${sellers[i].address}</p\>
         </body>`
         

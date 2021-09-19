@@ -11,19 +11,22 @@
         let part = <%- JSON.stringify(part) %>;
         let user = <%- JSON.stringify(user) %>;
         let avatarUrl = '<%- avatarUrl %>';
-        let sellers = <%- JSON.stringify(part) %>;
+        let sellers = <%- JSON.stringify(sellers) %>;
     </script>
     <h3>My Google Maps Demo</h3>
     <!--The div element for the map -->
     <div id="map"></div>
-    <form id="checkoutForm">
-      <input id="" name="">
+    <form id="checkoutForm" action="/create-checkout-session" method="post">
+      <input id="checkoutQt" name="qt" type="hidden">
+      <input id="checkoutProduct" name="product" type="hidden">
+      <input id="checkoutUser" name="user" type="hidden">
+      <button id="checkoutButton" type="submit" style="visibility: hidden;">Checkout</button>
     </form>
 
-    <form action="/findSeller" action="post" id="coordinateForm">
+    <form id="coordinateForm" action="/findSellers" method="post">
       <input id="latCoord" name="lat" type="hidden">
       <input id="lonCoord" name="lon" type="hidden">
-      <button id="coordinateButton" type="submit"></button>
+      <button id="coordinateButton" type="submit" style="visibility:hidden;"></button>
     </form>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
