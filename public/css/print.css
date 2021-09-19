@@ -39,9 +39,11 @@ nav img {
 }
 
 button, input {
+    margin-top: 40px;
     font-family: recursive;
     border: none;
     padding: 5px 10px;
+    font-size: 20px;
 }
 
 #filter {
@@ -100,4 +102,20 @@ nav form button {
     padding-bottom: 0;
     color: black;
     text-align: left;
+}
+
+#selectedName {
+    padding-bottom: 20px;
+}
+
+#selectedAddress {
+    padding-bottom: 30px;
+}
+
+#selectedProfile {
+    padding-bottom: 30px;
+}
+
+#selectedItem {
+    padding-bottom: 20px;
 }

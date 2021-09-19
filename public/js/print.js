@@ -5,7 +5,23 @@ let lastOpenedMarker = null;
 
 // FUNCTION
 onload = function() {
-    if (part) {
+    if (!part)
+    {
+        let caption1 = document.getElementById('caption1');
+        caption1.style.fontSize = '70px';
+        caption1.innerHTML = "Check out some of the 3D printers nearby!";
+
+        let caption2 = document.getElementById('caption2');
+        caption2.innerHTML = "Click on the icons for more details.";
+    }
+    else
+    {
+        let caption1 = document.getElementById('caption1');
+        caption1.innerHTML = "YOU'RE ALMOST THERE!";
+
+        let caption2 = document.getElementById('caption2');
+        caption2.innerHTML = "Just select a nearby seller and you'll be on your way.";
+
         let checkoutQt = document.getElementById('checkoutQt');
         checkoutQt.value = part.qt;
 
