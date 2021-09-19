@@ -214,14 +214,22 @@ footer .pages{
 }
 
 /*CARDS css*/
-.carddiv{
-
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 200px;
+    
 }
+
 .cardlink{
-    display:block;
+    background-color: red;
+}
+.carddiv{
+    
 }
 .cardimg{
-
+    
+    height: auto;
 }
 .cardprice{
 

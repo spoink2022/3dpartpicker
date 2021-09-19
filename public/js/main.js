@@ -1,42 +1,55 @@
 $( document ).ready(function() {
-    let cards = document.getElementsByClassName('products');
-    let cardsinfo = [];
-    for (let i = 0; i < parts.length; i++) {
-        //access tags, price, image, name 
-        let id = parts[i]['id'];
-        let partName = parts[i]['name'];
-        let tags = [parts[i]['tag'],parts[i]['tag_2']];
-        let price= parts[i]['price_20'];
-        let dollarprice = price/100;
-        let partImage = parts[i]['images'][0];
-        let card = `
-            <div class='productCard'>
 
-                <a href = "http://localhost:3000/product?id=${id}${user ? `&user=${user.id}` : ''}"><img src='${partImage}' alt='Photo'></img></a>
-                <p class='price'>Price: $${dollarprice.toFixed(2)}</p>
-                <p class='name'>${partName}</p>
-                <div class='tags'>
-                
-                `;
-        for (let i = 0; i < tags.length; i++){
-            if(tags[i]) {card += tags[i]+' '}
-        }
-        card+='</div></div>'
-        cardsinfo.push(card)
-        //card is complete for one
-    }
-    let count = 0;
-    for (let i = 0; i < cards.length; i++){
-        for (let j = 0; j < 7; j++){
-            //console.log(count, cardsinfo[count])
+    //let popularcards = document.getElementsByClassName('popularProducts')
+    let lineofcards = document.getElementsByClassName('products')
+    let cardorder = [[0,1,2,3,4],[5,6,7,8,9],[10,1,2,3,4]]
+    for (let i = 0;i<lineofcards.length;i++){
+        let rowOfCards = cardorder[i]
+        for (let j=0; j<4; j++) { 
+            //info on card
+            let cardinfo = parts[rowOfCards[j]]
+            console.log(cardinfo)
+            let id = cardinfo['id'];//for href anchor tag around image
+            let partName = cardinfo['name'];
+            let tags = [cardinfo['tag'],cardinfo['tag_2']];
+            let price= cardinfo['price_20'];
+            let dollarprice = price/100;
+            //console.log(cardinfo['price'])
+            let partImage = cardinfo['images'][0];
+
+            //creating card
+            let cardlink = document.createElement('a');
+            cardlink.setAttribute('href',`http://localhost:3000/product?id=${id}&user=1`)
+            cardlink.classList.add('cardlink');//css class needeed display block the link
+            let carddiv = document.createElement('div');
+            carddiv.classList.add('carddiv');//css class needeed
+            let cardimg = document.createElement('img');
+            cardimg.setAttribute('src', partImage);
+            cardimg.setAttribute('alt', 'Photo');
+            cardimg.classList.add('cardimg');//css class needeed
+            let cardprice = document.createElement('p');
+            cardprice.innerHTML = '$'+dollarprice.toFixed(2);
+            let cardname = document.createElement('p');
+            cardname.innerHTML = partName;
+            cardname.classList.add('cardname');//css class needeed
             
-            
-            cards[i].innerHTML += cardsinfo[count];
-            if(count ==parts.length-1){
-                count = 0;
-            }else{
-                count++;
+            cardlink.appendChild(cardimg);
+            cardlink.appendChild(cardname);
+            cardlink.appendChild(cardprice);
+            //console.log(cardprice)
+            cardprice.classList.add('cardprice');//css class needeed           
+            for (let i = 0; i < tags.length; i++){
+                if(tags[i]) {
+                    let cardtag = document.createElement('p');
+                    cardtag.innerHTML = tags[i];
+                    cardtag.classList.add('cardtag');//css class needeed
+                    cardlink.appendChild(cardtag);
+                }
             }
+            lineofcards[i].append(cardlink)
+            
+            console.log(cardlink)
         }
+
     }
 });
